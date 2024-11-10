@@ -2,6 +2,5 @@
     "video": "skePaM3nA2w?si=dG_NH3eyfnq5FMyE",
     "title": "Iterative Solution",
     "timeComplexity": "O(n)",
-    "spaceComplexity": "O(1)",
-    "complexityExplanation": "n is the number of nodes in the linked list"
+    "spaceComplexity": "O(1)"
 }

@@ -2,6 +2,5 @@
     "video": "PBnAF8zxBVw?si=w7JuvitYAtMSDsSI",
     "title": "Recursive Binary Search",
     "timeComplexity": "O(log n)",
-    "spaceComplexity": "O(log n)",
-    "complexityExplanation": "n is the number of elements in the input list nums"
+    "spaceComplexity": "O(log n)"
 }

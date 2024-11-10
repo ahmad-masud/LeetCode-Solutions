@@ -2,6 +2,5 @@
     "video": "ScvAGc6yBs4?si=qRcnTKoBhYhbcKZT",
     "title": "Breadth-First Search (BFS) Solution",
     "timeComplexity": "O(n * m)",
-    "spaceComplexity": "O(min(n, m))",
-    "complexityExplanation": "n and m are the dimensions of the grid"
+    "spaceComplexity": "O(min(n, m))"
 }

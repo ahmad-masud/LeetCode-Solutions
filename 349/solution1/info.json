@@ -2,6 +2,5 @@
     "video": "Lcj_cuZUy68?si=3Gqo9JgWimF9MuRB",
     "title": "Brute Force Solution",
     "timeComplexity": "O(n * m)",
-    "spaceComplexity": "O(min(n, m))",
-    "complexityExplanation": "n and m are the sizes of the input lists nums1 and nums2"
+    "spaceComplexity": "O(min(n, m))"
 }

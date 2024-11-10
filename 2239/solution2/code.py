@@ -1,10 +1,11 @@
-def findClosestNumber(nums: List[int]) -> int:
-    res = float('inf')
+class Solution:
+    def findClosestNumber(nums: List[int]) -> int:
+        res = float('inf')
 
-    for n in nums:
-        if abs(n) < abs(res):
-            res = n
-        elif abs(n) == abs(res):
-            res = max(n, res)
+        for n in nums:
+            if abs(n) < abs(res):
+                res = n
+            elif abs(n) == abs(res):
+                res = max(n, res)
 
-    return res
+        return res

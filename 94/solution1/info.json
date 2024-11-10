@@ -2,6 +2,5 @@
     "video": "MR-F70Hawo8?si=YXJUh-30v4xd-PLh",
     "title": "Recursive Solution",
     "timeComplexity": "O(n)",
-    "spaceComplexity": "O(n)",
-    "complexityExplanation": "n is the number of nodes in the binary tree"
+    "spaceComplexity": "O(n)"
 }

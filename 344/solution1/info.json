@@ -2,6 +2,5 @@
     "video": "QmvMuRcnIZ8?si=yll0E7OyDREY5ogu",
     "title": "Two Pointer Solution",
     "timeComplexity": "O(n)",
-    "spaceComplexity": "O(1)",
-    "complexityExplanation": "n is the number of elements in the input list s"
+    "spaceComplexity": "O(1)"
 }

@@ -2,6 +2,5 @@
     "video": "YcusSSCLmKQ?si=HaWWVb-YQGNyZv7z",
     "title": "Math Set Solution",
     "timeComplexity": "O(n)",
-    "spaceComplexity": "O(n)",
-    "complexityExplanation": "n is the number of elements in the input list nums"
+    "spaceComplexity": "O(n)"
 }
