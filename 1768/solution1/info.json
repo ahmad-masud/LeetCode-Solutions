@@ -1,0 +1,5 @@
+{
+    "title": "Brute Force Solution",
+    "timeComplexity": "O(n + m)",
+    "spaceComplexity": "O(n + m)"
+}
