@@ -1,0 +1,7 @@
+{
+    "video": "Lcj_cuZUy68?si=3Gqo9JgWimF9MuRB",
+    "title": "Two Pointer Solution - Sorted Arrays",
+    "timeComplexity": "O(n log n + m log m)",
+    "spaceComplexity": "O(min(n, m))",
+    "complexityExplanation": "n and m are the sizes of the input lists nums1 and nums2"
+}

@@ -1,0 +1,7 @@
+{
+    "video": "skePaM3nA2w?si=dG_NH3eyfnq5FMyE",
+    "title": "Recursive Solution",
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "complexityExplanation": "n is the number of nodes in the linked list"
+}

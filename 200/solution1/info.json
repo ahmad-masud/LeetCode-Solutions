@@ -1,0 +1,7 @@
+{
+    "video": "ScvAGc6yBs4?si=qRcnTKoBhYhbcKZT",
+    "title": "Depth-First Search (DFS) Solution",
+    "timeComplexity": "O(n * m)",
+    "spaceComplexity": "O(n * m)",
+    "complexityExplanation": "n and m are the dimensions of the grid"
+}

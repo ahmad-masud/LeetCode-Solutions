@@ -1,0 +1,7 @@
+{
+    "video": "8VOP4Mm4nFs?si=GMR-G8DNP7sHt-s8",
+    "title": "Alternative Approach - Sorting",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(1)",
+    "complexityExplanation": "n represents the number of elements in the input list nums"
+}

@@ -1,0 +1,7 @@
+{
+    "video": "YcusSSCLmKQ?si=HaWWVb-YQGNyZv7z",
+    "title": "Optimal Solution - Using XOR",
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(1)",
+    "complexityExplanation": "n is the number of elements in the input list nums"
+}

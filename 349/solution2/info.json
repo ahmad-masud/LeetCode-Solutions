@@ -1,0 +1,7 @@
+{
+    "video": "Lcj_cuZUy68?si=3Gqo9JgWimF9MuRB",
+    "title": "Hash Set Solution",
+    "timeComplexity": "O(n + m)",
+    "spaceComplexity": "O(n + m)",
+    "complexityExplanation": "n and m are the sizes of the input lists nums1 and nums2"
+}

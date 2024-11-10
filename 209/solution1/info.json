@@ -1,0 +1,7 @@
+{
+    "video": "qgsXwaG2nvs?si=wpkI_l6-E8zZjpzM",
+    "title": "Brute Force Solution",
+    "timeComplexity": "O(n^2)",
+    "spaceComplexity": "O(1)",
+    "complexityExplanation": "n is the number of elements in the input list nums"
+}
