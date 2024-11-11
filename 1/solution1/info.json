@@ -1,5 +1,4 @@
 {
-    "video": "oetyCTdewlU?si=YVht9LVdy8bIOfaa",
     "title": "Brute Force Solution",
     "timeComplexity": "O(n^2)",
     "spaceComplexity": "O(1)"

@@ -1,5 +1,4 @@
 {
-    "video": "PBnAF8zxBVw?si=w7JuvitYAtMSDsSI",
     "title": "Iterative Binary Search",
     "timeComplexity": "O(log n)",
     "spaceComplexity": "O(1)"

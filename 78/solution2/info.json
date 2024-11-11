@@ -1,5 +1,4 @@
 {
-    "video": "GHtOJN7RX-0?si=A1OHau29Wj7RQsUY",
     "title": "Iterative Solution",
     "timeComplexity": "O(2^n * n)",
     "spaceComplexity": "O(2^n)"

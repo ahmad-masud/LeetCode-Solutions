@@ -1,5 +1,4 @@
 {
-    "video": "zfBUOrv1u4k?si=P3USqAXRpTLHMnbf",
     "title": "Kadane's Algorithm",
     "timeComplexity": "O(n)",
     "spaceComplexity": "O(1)"
