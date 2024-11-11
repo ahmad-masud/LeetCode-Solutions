@@ -1,5 +1,5 @@
 {
     "title": "Prefix and Suffix Product",
     "timeComplexity": "O(n)",
-    "spaceComplexity": "O(1) (excluding the output array)"
+    "spaceComplexity": "O(1)"
 }
