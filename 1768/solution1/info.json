@@ -1,5 +1,5 @@
 {
-    "title": "Brute Force Solution",
+    "title": "Alternating Merge",
     "timeComplexity": "O(n + m)",
-    "spaceComplexity": "O(n + m)"
+    "spaceComplexity": "O(1)"
 }
