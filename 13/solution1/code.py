@@ -1,6 +1,6 @@
 class Solution:
     def romanToInt(self, s: str) -> int:
-        roman_map = {
+        dic = {
             'I': 1, 
             'V': 5, 
             'X': 10, 
@@ -12,9 +12,9 @@ class Solution:
         res = 0
 
         for i in range(len(s)):
-            if i < len(s) - 1 and roman_map[s[i]] < roman_map[s[i + 1]]:
-                res -= roman_map[s[i]]
+            if i < len(s) - 1 and dic[s[i]] < dic[s[i + 1]]:
+                res -= dic[s[i]]
             else:
-                res += roman_map[s[i]]
+                res += dic[s[i]]
 
         return res
