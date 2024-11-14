@@ -1,7 +1,7 @@
 import os
 import json
 
-def create_solutions_json(root_dir):
+def package(root_dir):
     solutions_data = []
 
     # Walk through each problem directory
@@ -57,4 +57,4 @@ def create_solutions_json(root_dir):
 
 # Set the root directory to the location of your repository
 root_directory = "."
-create_solutions_json(root_directory)
+package(root_directory)
