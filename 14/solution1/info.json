@@ -1,5 +1,0 @@
-{
-    "title": "Vertical Scanning",
-    "timeComplexity": "O(n * m)",
-    "spaceComplexity": "O(1)"
-}
