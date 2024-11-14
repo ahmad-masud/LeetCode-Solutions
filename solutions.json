@@ -271,7 +271,7 @@
     },
     {
         "id": 242,
-        "video": null,
+        "video": "KG9GTX9oqss?si=IIPKz_m82uKnPfSe",
         "solutions": [
             {
                 "title": "Sorting and Comparison",
@@ -287,7 +287,7 @@
             },
             {
                 "title": "Manual Hash Table Implementation",
-                "pythonCode": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        if len(s) != len(t):\n            return False\n\n        count = {}\n\n        for c in s:\n            count[c] = count.get(c, 0) + 1\n\n        for c in t:\n            if c not in count or count[c] == 0:\n                return False\n            \n            count[c] -= 1\n\n        for v in count.values():\n            if v != 0:\n                return False\n\n        return True",
+                "pythonCode": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        if len(s) != len(t):\n            return False\n\n        count = {}\n\n        for c in s:\n            count[c] = count.get(c, 0) + 1\n\n        for c in t:\n            if c not in count or count[c] == 0:\n                return False\n            \n            count[c] -= 1\n\n        for n in count.values():\n            if n != 0:\n                return False\n\n        return True",
                 "timeComplexity": "O(n)",
                 "spaceComplexity": "O(1)"
             },

@@ -14,8 +14,8 @@ class Solution:
             
             count[c] -= 1
 
-        for v in count.values():
-            if v != 0:
+        for n in count.values():
+            if n != 0:
                 return False
 
         return True
