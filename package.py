@@ -48,6 +48,9 @@ def package(root_dir):
             if problem_obj["solutions"]:
                 solutions_data.append(problem_obj)
 
+    # Sort the solutions_data by the 'id' field
+    solutions_data.sort(key=lambda x: x["id"])
+
     # Write data to solutions.json
     output_file = os.path.join(root_dir, 'solutions.json')
     with open(output_file, 'w') as json_file:

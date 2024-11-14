@@ -18,6 +18,96 @@
         ]
     },
     {
+        "id": 13,
+        "video": "iK0CCGldvw4?si=iogrXudOQp946u2P",
+        "solutions": [
+            {
+                "title": "Subtractive Notation Handling for Roman to Integer",
+                "pythonCode": "class Solution:\n    def romanToInt(self, s: str) -> int:\n        dic = {\n            'I': 1, \n            'V': 5, \n            'X': 10, \n            'L': 50, \n            'C': 100, \n            'D': 500, \n            'M': 1000\n        }\n        res = 0\n\n        for i in range(len(s)):\n            if i < len(s) - 1 and dic[s[i]] < dic[s[i + 1]]:\n                res -= dic[s[i]]\n            else:\n                res += dic[s[i]]\n\n        return res",
+                "timeComplexity": "O(n)",
+                "spaceComplexity": "O(1)"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "video": "ALgs0EH1jTo?si=Ei5TxWCCkwmfXhCm",
+        "solutions": [
+            {
+                "title": "Vertical Scanning",
+                "pythonCode": "class Solution:\n    def longestCommonPrefix(self, strs: List[str]) -> str:\n        res = \"\"\n\n        for i in range(len(strs[0])):\n            for s in strs:\n                if i == len(s) or s[i] != strs[0][i]:\n                    return res\n\n            res += strs[0][i]\n\n        return res",
+                "timeComplexity": "O(n * m)",
+                "spaceComplexity": "O(1)"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "video": "tTIKa0xXYmk?si=vOAx0G9yA9pV4i7l",
+        "solutions": [
+            {
+                "title": "Stack Solution",
+                "pythonCode": "class Solution:\n    def isValid(s: str) -> bool:\n        dic = {')': '(', ']': '[', '}': '{'}\n        stack = []\n\n        for c in s:\n            if c in dic:\n                if not stack:\n                    return False\n\n                bracket = stack.pop()\n                if dic[c] != bracket:\n                    return False\n            else:\n                stack.append(c)\n\n        return not stack",
+                "timeComplexity": "O(n)",
+                "spaceComplexity": "O(n)"
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "video": "zfBUOrv1u4k?si=P3USqAXRpTLHMnbf",
+        "solutions": [
+            {
+                "title": "Brute Force Solution",
+                "pythonCode": "class Solution:\n    def maxSubArray(self, nums: List[int]) -> int:\n        max_sum = float('-inf')\n\n        for i in range(len(nums)):\n            curr_sum = 0\n            for j in range(i, len(nums)):\n                curr_sum += nums[j]\n                max_sum = max(max_sum, curr_sum)\n\n        return max_sum",
+                "timeComplexity": "O(n^2)",
+                "spaceComplexity": "O(1)"
+            },
+            {
+                "title": "Kadane's Algorithm",
+                "pythonCode": "class Solution:\n    def maxSubArray(self, nums: List[int]) -> int:\n        res = float('-inf')\n        curr = 0\n\n        for n in nums:\n            curr += n\n            res = max(res, curr)\n\n            if curr < 0:\n                curr = 0\n\n        return res",
+                "timeComplexity": "O(n)",
+                "spaceComplexity": "O(1)"
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "video": "GHtOJN7RX-0?si=A1OHau29Wj7RQsUY",
+        "solutions": [
+            {
+                "title": "Backtracking Solution",
+                "pythonCode": "class Solution:\n    def subsets(self, nums: List[int]) -> List[List[int]]:\n        res = []\n\n        def backtrack(i: int, curr: List[int]) -> None:\n            if i == len(nums):\n                res.append(curr)\n                return\n\n            backtrack(i + 1, curr + [nums[i]])\n            backtrack(i + 1, curr)\n\n        backtrack(0, [])\n        return res",
+                "timeComplexity": "O(2^n * n)",
+                "spaceComplexity": "O(2^n * n)"
+            },
+            {
+                "title": "Iterative Solution",
+                "pythonCode": "class Solution:\n    def subsets(self, nums: List[int]) -> List[List[int]]:\n        res = [[]]\n\n        for n in nums:\n            res += [curr + [n] for curr in res]\n\n        return res",
+                "timeComplexity": "O(2^n * n)",
+                "spaceComplexity": "O(2^n)"
+            }
+        ]
+    },
+    {
+        "id": 94,
+        "video": "MR-F70Hawo8?si=YXJUh-30v4xd-PLh",
+        "solutions": [
+            {
+                "title": "Recursive Solution",
+                "pythonCode": "class Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n\n        def dfs(node):\n            if not node:\n                return\n\n            dfs(node.left)\n            res.append(node.val)\n            dfs(node.right)\n\n        dfs(root)\n        return res",
+                "timeComplexity": "O(n)",
+                "spaceComplexity": "O(n)"
+            },
+            {
+                "title": "Iterative Solution",
+                "pythonCode": "class Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n        stack = []\n        curr = root\n\n        while curr or stack:\n            while curr:\n                stack.append(curr)\n                curr = curr.left\n\n            curr = stack.pop()\n            res.append(curr.val)\n            curr = curr.right\n\n        return res",
+                "timeComplexity": "O(n)",
+                "spaceComplexity": "O(n)"
+            }
+        ]
+    },
+    {
         "id": 121,
         "video": "t5D4F67kmM0?si=hhnGUi3SmfaiITXZ",
         "solutions": [
@@ -36,18 +126,6 @@
             {
                 "title": "Two Pointers with Character Filtering",
                 "pythonCode": "class Solution:\n    def isPalindrome(self, s: str) -> bool:\n        l = 0\n        r = len(s) - 1\n\n        while l < r:\n            while l < r and not s[l].isalnum():\n                l += 1\n                \n            while l < r and not s[r].isalnum():\n                r -= 1\n\n            if s[l].lower() != s[r].lower():\n                return False\n\n            l += 1\n            r -= 1\n\n        return True",
-                "timeComplexity": "O(n)",
-                "spaceComplexity": "O(1)"
-            }
-        ]
-    },
-    {
-        "id": 13,
-        "video": "iK0CCGldvw4?si=iogrXudOQp946u2P",
-        "solutions": [
-            {
-                "title": "Subtractive Notation Handling for Roman to Integer",
-                "pythonCode": "class Solution:\n    def romanToInt(self, s: str) -> int:\n        dic = {\n            'I': 1, \n            'V': 5, \n            'X': 10, \n            'L': 50, \n            'C': 100, \n            'D': 500, \n            'M': 1000\n        }\n        res = 0\n\n        for i in range(len(s)):\n            if i < len(s) - 1 and dic[s[i]] < dic[s[i + 1]]:\n                res -= dic[s[i]]\n            else:\n                res += dic[s[i]]\n\n        return res",
                 "timeComplexity": "O(n)",
                 "spaceComplexity": "O(1)"
             }
@@ -84,18 +162,6 @@
         ]
     },
     {
-        "id": 14,
-        "video": "ALgs0EH1jTo?si=Ei5TxWCCkwmfXhCm",
-        "solutions": [
-            {
-                "title": "Vertical Scanning",
-                "pythonCode": "class Solution:\n    def longestCommonPrefix(self, strs: List[str]) -> str:\n        res = \"\"\n\n        for i in range(len(strs[0])):\n            for s in strs:\n                if i == len(s) or s[i] != strs[0][i]:\n                    return res\n\n            res += strs[0][i]\n\n        return res",
-                "timeComplexity": "O(n * m)",
-                "spaceComplexity": "O(1)"
-            }
-        ]
-    },
-    {
         "id": 167,
         "video": "-gPXrCoJgHE?si=rmf_JEzpk7aqUHIk",
         "solutions": [
@@ -103,18 +169,6 @@
                 "title": "Two-Pointer Technique",
                 "pythonCode": "class Solution:\n    def twoSum(self, numbers: List[int], target: int) -> List[int]:\n        l = 0\n        r = len(numbers) - 1\n\n        while l < r:\n            curr_sum = numbers[l] + numbers[r]\n            \n            if curr_sum == target:\n                return [l + 1, r + 1]\n            elif curr_sum < target:\n                l += 1\n            else:\n                r -= 1",
                 "timeComplexity": "O(n)",
-                "spaceComplexity": "O(1)"
-            }
-        ]
-    },
-    {
-        "id": 1768,
-        "video": "6tqnIGynncU?si=H1Pz6ncVs3a_F5cK",
-        "solutions": [
-            {
-                "title": "Alternating Merge",
-                "pythonCode": "class Solution:\n    def mergeAlternately(self, word1: str, word2: str) -> str:\n        res = []\n        i = 0\n\n        while i < len(word1) or i < len(word2):\n            if i < len(word1):\n                res.append(word1[i])\n                \n            if i < len(word2):\n                res.append(word2[i])\n\n            i += 1\n\n        return ''.join(res)",
-                "timeComplexity": "O(n + m)",
                 "spaceComplexity": "O(1)"
             }
         ]
@@ -134,18 +188,6 @@
                 "pythonCode": "class Solution:\n    def hammingWeight(self, n: int) -> int:\n        res = 0\n\n        while n:\n            n &= n - 1\n            res += 1\n\n        return res",
                 "timeComplexity": "O(1)",
                 "spaceComplexity": "O(1)"
-            }
-        ]
-    },
-    {
-        "id": 20,
-        "video": "tTIKa0xXYmk?si=vOAx0G9yA9pV4i7l",
-        "solutions": [
-            {
-                "title": "Stack Solution",
-                "pythonCode": "class Solution:\n    def isValid(s: str) -> bool:\n        dic = {')': '(', ']': '[', '}': '{'}\n        stack = []\n\n        for c in s:\n            if c in dic:\n                if not stack:\n                    return False\n\n                bracket = stack.pop()\n                if dic[c] != bracket:\n                    return False\n            else:\n                stack.append(c)\n\n        return not stack",
-                "timeComplexity": "O(n)",
-                "spaceComplexity": "O(n)"
             }
         ]
     },
@@ -198,24 +240,6 @@
             {
                 "title": "Sliding Window Solution",
                 "pythonCode": "class Solution:\n    def minSubArrayLen(self, target: int, nums: List[int]) -> int:\n        l = 0\n        prefix_sum = 0\n        res = float('inf')\n\n        for r in range(len(nums)):\n            prefix_sum += nums[r]\n\n            while prefix_sum >= target:\n                res = min(res, r - l + 1)\n                prefix_sum -= nums[l]\n                l += 1\n\n        return res if res != float('inf') else 0",
-                "timeComplexity": "O(n)",
-                "spaceComplexity": "O(1)"
-            }
-        ]
-    },
-    {
-        "id": 2239,
-        "video": "8VOP4Mm4nFs?si=GMR-G8DNP7sHt-s8",
-        "solutions": [
-            {
-                "title": "Alternative Approach - Sorting",
-                "pythonCode": "class Solution:\n    def findClosestNumber(nums: List[int]) -> int:\n        nums.sort(key=lambda x: (abs(x), -x))\n        return nums[0]",
-                "timeComplexity": "O(n log n)",
-                "spaceComplexity": "O(1)"
-            },
-            {
-                "title": "Optimal Solution - Linear Time",
-                "pythonCode": "class Solution:\n    def findClosestNumber(nums: List[int]) -> int:\n        res = float('inf')\n\n        for n in nums:\n            if abs(n) < abs(res):\n                res = n\n            elif abs(n) == abs(res):\n                res = max(n, res)\n\n        return res",
                 "timeComplexity": "O(n)",
                 "spaceComplexity": "O(1)"
             }
@@ -318,24 +342,6 @@
         ]
     },
     {
-        "id": 53,
-        "video": "zfBUOrv1u4k?si=P3USqAXRpTLHMnbf",
-        "solutions": [
-            {
-                "title": "Brute Force Solution",
-                "pythonCode": "class Solution:\n    def maxSubArray(self, nums: List[int]) -> int:\n        max_sum = float('-inf')\n\n        for i in range(len(nums)):\n            curr_sum = 0\n            for j in range(i, len(nums)):\n                curr_sum += nums[j]\n                max_sum = max(max_sum, curr_sum)\n\n        return max_sum",
-                "timeComplexity": "O(n^2)",
-                "spaceComplexity": "O(1)"
-            },
-            {
-                "title": "Kadane's Algorithm",
-                "pythonCode": "class Solution:\n    def maxSubArray(self, nums: List[int]) -> int:\n        res = float('-inf')\n        curr = 0\n\n        for n in nums:\n            curr += n\n            res = max(res, curr)\n\n            if curr < 0:\n                curr = 0\n\n        return res",
-                "timeComplexity": "O(n)",
-                "spaceComplexity": "O(1)"
-            }
-        ]
-    },
-    {
         "id": 704,
         "video": "PBnAF8zxBVw?si=w7JuvitYAtMSDsSI",
         "solutions": [
@@ -354,38 +360,32 @@
         ]
     },
     {
-        "id": 78,
-        "video": "GHtOJN7RX-0?si=A1OHau29Wj7RQsUY",
+        "id": 1768,
+        "video": "6tqnIGynncU?si=H1Pz6ncVs3a_F5cK",
         "solutions": [
             {
-                "title": "Backtracking Solution",
-                "pythonCode": "class Solution:\n    def subsets(self, nums: List[int]) -> List[List[int]]:\n        res = []\n\n        def backtrack(i: int, curr: List[int]) -> None:\n            if i == len(nums):\n                res.append(curr)\n                return\n\n            backtrack(i + 1, curr + [nums[i]])\n            backtrack(i + 1, curr)\n\n        backtrack(0, [])\n        return res",
-                "timeComplexity": "O(2^n * n)",
-                "spaceComplexity": "O(2^n * n)"
-            },
-            {
-                "title": "Iterative Solution",
-                "pythonCode": "class Solution:\n    def subsets(self, nums: List[int]) -> List[List[int]]:\n        res = [[]]\n\n        for n in nums:\n            res += [curr + [n] for curr in res]\n\n        return res",
-                "timeComplexity": "O(2^n * n)",
-                "spaceComplexity": "O(2^n)"
+                "title": "Alternating Merge",
+                "pythonCode": "class Solution:\n    def mergeAlternately(self, word1: str, word2: str) -> str:\n        res = []\n        i = 0\n\n        while i < len(word1) or i < len(word2):\n            if i < len(word1):\n                res.append(word1[i])\n                \n            if i < len(word2):\n                res.append(word2[i])\n\n            i += 1\n\n        return ''.join(res)",
+                "timeComplexity": "O(n + m)",
+                "spaceComplexity": "O(1)"
             }
         ]
     },
     {
-        "id": 94,
-        "video": "MR-F70Hawo8?si=YXJUh-30v4xd-PLh",
+        "id": 2239,
+        "video": "8VOP4Mm4nFs?si=GMR-G8DNP7sHt-s8",
         "solutions": [
             {
-                "title": "Recursive Solution",
-                "pythonCode": "class Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n\n        def dfs(node):\n            if not node:\n                return\n\n            dfs(node.left)\n            res.append(node.val)\n            dfs(node.right)\n\n        dfs(root)\n        return res",
-                "timeComplexity": "O(n)",
-                "spaceComplexity": "O(n)"
+                "title": "Alternative Approach - Sorting",
+                "pythonCode": "class Solution:\n    def findClosestNumber(nums: List[int]) -> int:\n        nums.sort(key=lambda x: (abs(x), -x))\n        return nums[0]",
+                "timeComplexity": "O(n log n)",
+                "spaceComplexity": "O(1)"
             },
             {
-                "title": "Iterative Solution",
-                "pythonCode": "class Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n        stack = []\n        curr = root\n\n        while curr or stack:\n            while curr:\n                stack.append(curr)\n                curr = curr.left\n\n            curr = stack.pop()\n            res.append(curr.val)\n            curr = curr.right\n\n        return res",
+                "title": "Optimal Solution - Linear Time",
+                "pythonCode": "class Solution:\n    def findClosestNumber(nums: List[int]) -> int:\n        res = float('inf')\n\n        for n in nums:\n            if abs(n) < abs(res):\n                res = n\n            elif abs(n) == abs(res):\n                res = max(n, res)\n\n        return res",
                 "timeComplexity": "O(n)",
-                "spaceComplexity": "O(n)"
+                "spaceComplexity": "O(1)"
             }
         ]
     }
