@@ -28,7 +28,7 @@ jobs:
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
           git add solutions.json
-          git commit -m "Update solutions.json"
-          git push
+          git commit --amend --no-edit || echo "No changes to amend"
+          git push --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
