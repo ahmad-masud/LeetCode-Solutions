@@ -1,0 +1,5 @@
+{
+    "title": "Two Pointer Solution - Sorted Arrays",
+    "timeComplexity": "O(n log n + m log m)",
+    "spaceComplexity": "O(min(n, m))"
+}

@@ -1,0 +1,5 @@
+{
+    "title": "Iterative Solution",
+    "timeComplexity": "O(2^n * n)",
+    "spaceComplexity": "O(2^n)"
+}

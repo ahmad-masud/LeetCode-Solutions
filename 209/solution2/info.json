@@ -1,0 +1,5 @@
+{
+    "title": "Sliding Window Solution",
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(1)"
+}
