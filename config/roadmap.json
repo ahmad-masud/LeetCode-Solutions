@@ -1,0 +1,590 @@
+[
+  {
+    "name": "arrays & strings",
+    "data": [
+      {
+        "ID": 2239,
+        "Title": "Find Closest Number to Zero"
+      },
+      {
+        "ID": 1768,
+        "Title": "Merge Strings Alternately"
+      },
+      {
+        "ID": 13,
+        "Title": "Roman to Integer"
+      },
+      {
+        "ID": 14,
+        "Title": "Longest Common Prefix"
+      },
+      {
+        "ID": 228,
+        "Title": "Summary Ranges"
+      },
+      {
+        "ID": 238,
+        "Title": "Product of Array Except Self"
+      }
+    ]
+  },
+  {
+    "name": "hashmaps & sets",
+    "data": [
+      {
+        "ID": 1,
+        "Title": "Two Sum"
+      },
+      {
+        "ID": 136,
+        "Title": "Single Number"
+      },
+      {
+        "ID": 3,
+        "Title": "Longest Substring Without Repeating Characters"
+      },
+      {
+        "ID": 349,
+        "Title": "Intersection of Two Arrays"
+      },
+      {
+        "ID": 242,
+        "Title": "Valid Anagram"
+      },
+      {
+        "ID": 205,
+        "Title": "Isomorphic Strings"
+      },
+      {
+        "ID": 290,
+        "Title": "Word Pattern"
+      },
+      {
+        "ID": 217,
+        "Title": "Contains Duplicate"
+      },
+      {
+        "ID": 451,
+        "Title": "Sort Characters By Frequency"
+      },
+      {
+        "ID": 49,
+        "Title": "Group Anagrams"
+      }
+    ]
+  },
+  {
+    "name": "two pointers",
+    "data": [
+      {
+        "ID": 167,
+        "Title": "Two Sum II - Input Array Is Sorted"
+      },
+      {
+        "ID": 125,
+        "Title": "Valid Palindrome"
+      },
+      {
+        "ID": 344,
+        "Title": "Reverse String"
+      },
+      {
+        "ID": 121,
+        "Title": "Best Time to Buy and Sell Stock"
+      },
+      {
+        "ID": 345,
+        "Title": "Reverse Vowels of a String"
+      },
+      {
+        "ID": 11,
+        "Title": "Container With Most Water"
+      },
+      {
+        "ID": 283,
+        "Title": "Move Zeroes"
+      },
+      {
+        "ID": 27,
+        "Title": "Remove Element"
+      },
+      {
+        "ID": 1253,
+        "Title": "Partition Labels"
+      },
+      {
+        "ID": 88,
+        "Title": "Merge Sorted Array"
+      }
+    ]
+  },
+  {
+    "name": "stacks",
+    "data": [
+      {
+        "ID": 682,
+        "Title": "Baseball Game"
+      },
+      {
+        "ID": 20,
+        "Title": "Valid Parentheses"
+      },
+      {
+        "ID": 155,
+        "Title": "Min Stack"
+      },
+      {
+        "ID": 739,
+        "Title": "Daily Temperatures"
+      },
+      {
+        "ID": 42,
+        "Title": "Trapping Rain Water"
+      },
+      {
+        "ID": 84,
+        "Title": "Largest Rectangle in Histogram"
+      }
+    ]
+  },
+  {
+    "name": "linked lists",
+    "data": [
+      {
+        "ID": 206,
+        "Title": "Reverse Linked List"
+      },
+      {
+        "ID": 141,
+        "Title": "Linked List Cycle"
+      },
+      {
+        "ID": 21,
+        "Title": "Merge Two Sorted Lists"
+      },
+      {
+        "ID": 19,
+        "Title": "Remove Nth Node From End of List"
+      },
+      {
+        "ID": 160,
+        "Title": "Intersection of Two Linked Lists"
+      },
+      {
+        "ID": 876,
+        "Title": "Middle of the Linked List"
+      },
+      {
+        "ID": 143,
+        "Title": "Reorder List"
+      },
+      {
+        "ID": 92,
+        "Title": "Reverse Linked List II"
+      },
+      {
+        "ID": 138,
+        "Title": "Copy List with Random Pointer"
+      },
+      {
+        "ID": 23,
+        "Title": "Merge k Sorted Lists"
+      },
+      {
+        "ID": 25,
+        "Title": "Reverse Nodes in k-Group"
+      },
+      {
+        "ID": 61,
+        "Title": "Rotate List"
+      },
+      {
+        "ID": 24,
+        "Title": "Swap Nodes in Pairs"
+      }
+    ]
+  },
+  {
+    "name": "binary search",
+    "data": [
+      {
+        "ID": 704,
+        "Title": "Binary Search"
+      },
+      {
+        "ID": 278,
+        "Title": "First Bad Version"
+      },
+      {
+        "ID": 35,
+        "Title": "Search Insert Position"
+      },
+      {
+        "ID": 374,
+        "Title": "Guess Number Higher or Lower"
+      },
+      {
+        "ID": 33,
+        "Title": "Search in Rotated Sorted Array"
+      },
+      {
+        "ID": 34,
+        "Title": "Find First and Last Position of Element in Sorted Array"
+      },
+      {
+        "ID": 852,
+        "Title": "Peak Index in a Mountain Array"
+      }
+    ]
+  },
+  {
+    "name": "sliding window",
+    "data": [
+      {
+        "ID": 209,
+        "Title": "Minimum Size Subarray Sum"
+      },
+      {
+        "ID": 3,
+        "Title": "Longest Substring Without Repeating Characters"
+      },
+      {
+        "ID": 424,
+        "Title": "Longest Repeating Character Replacement"
+      },
+      {
+        "ID": 567,
+        "Title": "Permutation in String"
+      },
+      {
+        "ID": 76,
+        "Title": "Minimum Window Substring"
+      },
+      {
+        "ID": 1004,
+        "Title": "Max Consecutive Ones III"
+      },
+      {
+        "ID": 239,
+        "Title": "Sliding Window Maximum"
+      }
+    ]
+  },
+  {
+    "name": "trees",
+    "data": [
+      {
+        "ID": 104,
+        "Title": "Maximum Depth of Binary Tree"
+      },
+      {
+        "ID": 226,
+        "Title": "Invert Binary Tree"
+      },
+      {
+        "ID": 110,
+        "Title": "Balanced Binary Tree"
+      },
+      {
+        "ID": 101,
+        "Title": "Symmetric Tree"
+      },
+      {
+        "ID": 543,
+        "Title": "Diameter of Binary Tree"
+      },
+      {
+        "ID": 94,
+        "Title": "Binary Tree Inorder Traversal"
+      },
+      {
+        "ID": 700,
+        "Title": "Search in a Binary Search Tree"
+      },
+      {
+        "ID": 701,
+        "Title": "Insert into a Binary Search Tree"
+      },
+      {
+        "ID": 98,
+        "Title": "Validate Binary Search Tree"
+      },
+      {
+        "ID": 450,
+        "Title": "Delete Node in a BST"
+      },
+      {
+        "ID": 235,
+        "Title": "Lowest Common Ancestor of a Binary Search Tree"
+      },
+      {
+        "ID": 530,
+        "Title": "Minimum Absolute Difference in BST"
+      },
+      {
+        "ID": 199,
+        "Title": "Binary Tree Right Side View"
+      },
+      {
+        "ID": 102,
+        "Title": "Binary Tree Level Order Traversal"
+      }
+    ]
+  },
+  {
+    "name": "tries",
+    "data": [
+      {
+        "ID": 208,
+        "Title": "Implement Trie (Prefix Tree)"
+      },
+      {
+        "ID": 211,
+        "Title": "Design Add and Search Words Data Structure"
+      }
+    ]
+  },
+  {
+    "name": "heaps",
+    "data": [
+      {
+        "ID": 215,
+        "Title": "Kth Largest Element in an Array"
+      },
+      {
+        "ID": 347,
+        "Title": "Top K Frequent Elements"
+      },
+      {
+        "ID": 973,
+        "Title": "K Closest Points to Origin"
+      },
+      {
+        "ID": 703,
+        "Title": "Kth Largest Element in a Stream"
+      },
+      {
+        "ID": 295,
+        "Title": "Find Median from Data Stream"
+      },
+      {
+        "ID": 1046,
+        "Title": "Last Stone Weight"
+      }
+    ]
+  },
+  {
+    "name": "intervals",
+    "data": [
+      {
+        "ID": 56,
+        "Title": "Merge Intervals"
+      },
+      {
+        "ID": 57,
+        "Title": "Insert Interval"
+      },
+      {
+        "ID": 435,
+        "Title": "Non-overlapping Intervals"
+      },
+      {
+        "ID": 252,
+        "Title": "Meeting Rooms"
+      },
+      {
+        "ID": 253,
+        "Title": "Meeting Rooms II"
+      }
+    ]
+  },
+  {
+    "name": "backtracking",
+    "data": [
+      {
+        "ID": 46,
+        "Title": "Permutations"
+      },
+      {
+        "ID": 78,
+        "Title": "Subsets"
+      },
+      {
+        "ID": 90,
+        "Title": "Subsets II"
+      },
+      {
+        "ID": 77,
+        "Title": "Combinations"
+      },
+      {
+        "ID": 22,
+        "Title": "Generate Parentheses"
+      },
+      {
+        "ID": 39,
+        "Title": "Combination Sum"
+      },
+      {
+        "ID": 40,
+        "Title": "Combination Sum II"
+      }
+    ]
+  },
+  {
+    "name": "graphs",
+    "data": [
+      {
+        "ID": 200,
+        "Title": "Number of Islands"
+      },
+      {
+        "ID": 547,
+        "Title": "Number of Provinces"
+      },
+      {
+        "ID": 695,
+        "Title": "Max Area of Island"
+      },
+      {
+        "ID": 1020,
+        "Title": "Number of Enclaves"
+      },
+      {
+        "ID": 133,
+        "Title": "Clone Graph"
+      },
+      {
+        "ID": 994,
+        "Title": "Rotting Oranges"
+      },
+      {
+        "ID": 797,
+        "Title": "All Paths From Source to Target"
+      },
+      {
+        "ID": 207,
+        "Title": "Course Schedule"
+      },
+      {
+        "ID": 323,
+        "Title": "Number of Connected Components in an Undirected Graph"
+      },
+      {
+        "ID": 684,
+        "Title": "Redundant Connection"
+      }
+    ]
+  },
+  {
+    "name": "dynamic programming",
+    "data": [
+      {
+        "ID": 70,
+        "Title": "Climbing Stairs"
+      },
+      {
+        "ID": 746,
+        "Title": "Min Cost Climbing Stairs"
+      },
+      {
+        "ID": 198,
+        "Title": "House Robber"
+      },
+      {
+        "ID": 213,
+        "Title": "House Robber II"
+      },
+      {
+        "ID": 62,
+        "Title": "Unique Paths"
+      },
+      {
+        "ID": 63,
+        "Title": "Unique Paths II"
+      },
+      {
+        "ID": 5,
+        "Title": "Longest Palindromic Substring"
+      },
+      {
+        "ID": 300,
+        "Title": "Longest Increasing Subsequence"
+      },
+      {
+        "ID": 1143,
+        "Title": "Longest Common Subsequence"
+      },
+      {
+        "ID": 152,
+        "Title": "Maximum Product Subarray"
+      }
+    ]
+  },
+  {
+    "name": "bit manipulation",
+    "data": [
+      {
+        "ID": 136,
+        "Title": "Single Number"
+      },
+      {
+        "ID": 191,
+        "Title": "Number of 1 Bits"
+      },
+      {
+        "ID": 231,
+        "Title": "Power of Two"
+      },
+      {
+        "ID": 338,
+        "Title": "Counting Bits"
+      },
+      {
+        "ID": 268,
+        "Title": "Missing Number"
+      },
+      {
+        "ID": 371,
+        "Title": "Sum of Two Integers"
+      },
+      {
+        "ID": 260,
+        "Title": "Single Number III"
+      },
+      {
+        "ID": 421,
+        "Title": "Maximum XOR of Two Numbers in an Array"
+      }
+    ]
+  },
+  {
+    "name": "greedy",
+    "data": [
+      {
+        "ID": 53,
+        "Title": "Maximum Subarray"
+      },
+      {
+        "ID": 55,
+        "Title": "Jump Game"
+      },
+      {
+        "ID": 134,
+        "Title": "Gas Station"
+      },
+      {
+        "ID": 846,
+        "Title": "Hand of Straights"
+      },
+      {
+        "ID": 1899,
+        "Title": "Merge Triplets to Form Target Triplet"
+      },
+      {
+        "ID": 678,
+        "Title": "Valid Parenthesis String"
+      }
+    ]
+  }
+]

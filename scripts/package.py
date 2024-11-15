@@ -1,12 +1,16 @@
 import os
 import json
 
-def package(root_dir):
+def package(root_dir, source_dir):
     solutions_data = []
 
+    print(f"Root directory: {root_dir}")
+    print(f"Source directory: {source_dir}")
+
     # Walk through each problem directory
-    for problem_dir in sorted(os.listdir(root_dir)):
-        problem_path = os.path.join(root_dir, problem_dir)
+    for problem_dir in sorted(os.listdir(source_dir)):
+        problem_path = os.path.join(source_dir, problem_dir)
+        print(f"Processing problem directory: {problem_path}")
 
         if os.path.isdir(problem_path) and problem_dir.isdigit():
             problem_obj = {
@@ -18,17 +22,20 @@ def package(root_dir):
             # Check for video file
             video_path = os.path.join(problem_path, 'video.txt')
             if os.path.isfile(video_path):
+                print(f"Found video file at: {video_path}")
                 with open(video_path, 'r') as video_file:
                     problem_obj["video"] = video_file.read().strip()
 
             # Collect solutions
             for solution_dir in os.listdir(problem_path):
                 solution_path = os.path.join(problem_path, solution_dir)
+                print(f"Checking solution directory: {solution_path}")
                 if os.path.isdir(solution_path):
                     code_path = os.path.join(solution_path, 'code.py')
                     info_path = os.path.join(solution_path, 'info.json')
 
                     if os.path.isfile(code_path) and os.path.isfile(info_path):
+                        print(f"Found solution files at: {code_path} and {info_path}")
                         with open(code_path, 'r') as code_file:
                             code_content = code_file.read()
 
@@ -52,12 +59,13 @@ def package(root_dir):
     solutions_data.sort(key=lambda x: x["id"])
 
     # Write data to solutions.json
-    output_file = os.path.join(root_dir, 'solutions.json')
+    output_file = os.path.join(root_dir, 'solutions.json')  # Adjusted path
     with open(output_file, 'w') as json_file:
         json.dump(solutions_data, json_file, indent=4)
 
     print(f"solutions.json created at {output_file}")
 
-# Set the root directory to the location of your repository
-root_directory = "."
-package(root_directory)
+# Set the root directory relative to the script's location
+root_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+source_directory = os.path.join(root_directory, 'src')
+package(root_directory, source_directory)
