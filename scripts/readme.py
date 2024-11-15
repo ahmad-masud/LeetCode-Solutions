@@ -27,6 +27,9 @@ def readme():
         for topic in category.get('data', []):  # Access the list of problems under 'data'
             leetcode_id = topic.get('ID', 'N/A')
             problem_name = topic.get('Title', 'N/A')
+            problem_link = topic.get('Link', '#')
+            problem_name_with_link = f'[{problem_name}]({problem_link})'  # Make the problem name clickable
+
             problem_path = f'src/{leetcode_id}'
 
             # Find all solutions for the problem
@@ -49,7 +52,7 @@ def readme():
                     video_url = vf.read().strip()
                     has_video = f'[✔️](https://www.youtube.com/embed/{video_url})'
 
-            readme_content += f'| {leetcode_id} | {problem_name} | {solution_links} | {has_video} |\n'
+            readme_content += f'| {leetcode_id} | {problem_name_with_link} | {solution_links} | {has_video} |\n'
 
     # Write the README content to a file
     output_path = os.path.abspath(os.path.join(script_dir, '..', 'README.md'))
