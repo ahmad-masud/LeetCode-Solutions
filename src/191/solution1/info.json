@@ -1,5 +1,5 @@
 {
-    "title": "Count Bits with Bitwise AND",
-    "timeComplexity": "O(1)",
-    "spaceComplexity": "O(1)"
+  "title": "Count Bits with Bitwise AND",
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(1)"
 }

@@ -1,5 +1,5 @@
 {
-    "title": "Iterative Binary Search",
-    "timeComplexity": "O(log n)",
-    "spaceComplexity": "O(1)"
+  "title": "Iterative Binary Search",
+  "timeComplexity": "O(log n)",
+  "spaceComplexity": "O(1)"
 }

@@ -3,35 +3,41 @@ name: Update Solutions
 on:
   push:
     branches:
-      - main  # or your desired branch
+      - main # or your desired branch
 
 jobs:
   update-solutions:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'  # Adjust to your preferred version
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x' # Adjust to your preferred version
 
-    - name: Install dependencies (if applicable)
-      run: |
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Install dependencies (if applicable)
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Run package.py
-      run: python scripts/package.py
+      - name: Run package.py
+        run: python scripts/package.py
 
-    - name: Commit changes
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git add solutions.json
-        git commit -m "Update solutions.json"
-        # Retry pull and push in case of race conditions
-        git pull --rebase
-        git push
-      continue-on-error: true
+      - name: Install Prettier
+        run: npm install -g prettier
+
+      - name: Format solutions.json with Prettier
+        run: prettier --write solutions.json
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add solutions.json
+          git commit -m "Update solutions.json"
+          # Retry pull and push in case of race conditions
+          git pull --rebase
+          git push
+        continue-on-error: true

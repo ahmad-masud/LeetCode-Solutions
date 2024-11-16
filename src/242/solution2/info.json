@@ -1,5 +1,5 @@
 {
-    "title": "Array Counting for Fixed Alphabet",
-    "timeComplexity": "O(n)",
-    "spaceComplexity": "O(1)"
+  "title": "Array Counting for Fixed Alphabet",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)"
 }

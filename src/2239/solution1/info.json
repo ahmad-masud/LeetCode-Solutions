@@ -1,5 +1,5 @@
 {
-    "title": "Alternative Approach - Sorting",
-    "timeComplexity": "O(n log n)",
-    "spaceComplexity": "O(1)"
+  "title": "Alternative Approach - Sorting",
+  "timeComplexity": "O(n log n)",
+  "spaceComplexity": "O(1)"
 }

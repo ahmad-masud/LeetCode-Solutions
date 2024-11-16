@@ -1,5 +1,5 @@
 {
-    "title": "Stack Solution",
-    "timeComplexity": "O(n)",
-    "spaceComplexity": "O(n)"
+  "title": "Stack Solution",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)"
 }

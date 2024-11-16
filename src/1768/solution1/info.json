@@ -1,5 +1,5 @@
 {
-    "title": "Alternating Merge",
-    "timeComplexity": "O(n + m)",
-    "spaceComplexity": "O(1)"
+  "title": "Alternating Merge",
+  "timeComplexity": "O(n + m)",
+  "spaceComplexity": "O(1)"
 }

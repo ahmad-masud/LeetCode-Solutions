@@ -1,5 +1,5 @@
 {
-    "title": "Depth-First Search (DFS) Solution",
-    "timeComplexity": "O(n * m)",
-    "spaceComplexity": "O(n * m)"
+  "title": "Depth-First Search (DFS) Solution",
+  "timeComplexity": "O(n * m)",
+  "spaceComplexity": "O(n * m)"
 }

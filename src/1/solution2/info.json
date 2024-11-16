@@ -1,5 +1,5 @@
 {
-    "title": "Optimal Solution - HashMap",
-    "timeComplexity": "O(n)",
-    "spaceComplexity": "O(n)"
+  "title": "Optimal Solution - HashMap",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)"
 }

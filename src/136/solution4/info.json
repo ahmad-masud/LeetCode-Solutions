@@ -1,5 +1,5 @@
 {
-    "title": "Optimal Solution - Using XOR",
-    "timeComplexity": "O(n)",
-    "spaceComplexity": "O(1)"
+  "title": "Optimal Solution - Using XOR",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)"
 }

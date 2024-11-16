@@ -1,5 +1,5 @@
 {
-    "title": "Brute Force Solution - Using Count",
-    "timeComplexity": "O(n^2)",
-    "spaceComplexity": "O(1)"
+  "title": "Brute Force Solution - Using Count",
+  "timeComplexity": "O(n^2)",
+  "spaceComplexity": "O(1)"
 }

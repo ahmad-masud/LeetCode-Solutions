@@ -1,5 +1,5 @@
 {
-    "title": "Manual Hash Table Implementation",
-    "timeComplexity": "O(n)",
-    "spaceComplexity": "O(1)"
+  "title": "Manual Hash Table Implementation",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)"
 }

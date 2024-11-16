@@ -1,5 +1,5 @@
 {
-    "title": "Iterative Solution",
-    "timeComplexity": "O(n)",
-    "spaceComplexity": "O(n)"
+  "title": "Iterative Solution",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)"
 }

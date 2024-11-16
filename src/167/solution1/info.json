@@ -1,5 +1,5 @@
 {
-    "title": "Two-Pointer Technique",
-    "timeComplexity": "O(n)",
-    "spaceComplexity": "O(1)"
+  "title": "Two-Pointer Technique",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)"
 }

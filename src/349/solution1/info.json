@@ -1,5 +1,5 @@
 {
-    "title": "Brute Force Solution",
-    "timeComplexity": "O(n * m)",
-    "spaceComplexity": "O(min(n, m))"
+  "title": "Brute Force Solution",
+  "timeComplexity": "O(n * m)",
+  "spaceComplexity": "O(min(n, m))"
 }

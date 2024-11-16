@@ -1,5 +1,5 @@
 {
-    "title": "Breadth-First Search (BFS) Solution",
-    "timeComplexity": "O(n * m)",
-    "spaceComplexity": "O(min(n, m))"
+  "title": "Breadth-First Search (BFS) Solution",
+  "timeComplexity": "O(n * m)",
+  "spaceComplexity": "O(min(n, m))"
 }

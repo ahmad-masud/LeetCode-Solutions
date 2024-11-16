@@ -1,5 +1,5 @@
 {
-    "title": "Kadane's Algorithm",
-    "timeComplexity": "O(n)",
-    "spaceComplexity": "O(1)"
+  "title": "Kadane's Algorithm",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)"
 }

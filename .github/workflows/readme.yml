@@ -3,32 +3,38 @@ name: Generate README
 on:
   push:
     branches:
-      - main  # or your target branch
+      - main # or your target branch
 
 jobs:
   generate-readme:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'  # Adjust to your preferred version
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x' # Adjust to your preferred version
 
-    - name: Generate README
-      run: python scripts/readme.py
+      - name: Generate README
+        run: python scripts/readme.py
 
-    - name: Commit changes
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git add README.md
-        git commit -m "Update README"
-        # Pull the latest changes from the remote branch and rebase
-        git pull --rebase
-        # Push the changes
-        git push
-      continue-on-error: true
+      - name: Install Prettier
+        run: npm install -g prettier
+
+      - name: Format README with Prettier
+        run: prettier --write README.md
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update README"
+          # Pull the latest changes from the remote branch and rebase
+          git pull --rebase
+          # Push the changes
+          git push
+        continue-on-error: true
