@@ -5,13 +5,13 @@
     "solutions": [
       {
         "title": "Optimal Solution - HashMap",
-        "pythonCode": "class Solution:\n    def twoSum(nums: List[int], target: int) -> List[int]:\n        num_map = {}\n\n        for i, num in enumerate(nums):\n            diff = target - num\n\n            if diff in num_map:\n                return [num_map[diff], i]\n\n            num_map[num] = i",
+        "pythonCode": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        num_map = {}\n\n        for i, num in enumerate(nums):\n            diff = target - num\n\n            if diff in num_map:\n                return [num_map[diff], i]\n\n            num_map[num] = i",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
       },
       {
         "title": "Brute Force Solution",
-        "pythonCode": "class Solution:\n    def twoSum(nums: List[int], target: int) -> List[int]:\n        for i in range(len(nums)):\n            for j in range(i + 1, len(nums)):\n                if nums[i] + nums[j] == target:\n                    return [i, j]",
+        "pythonCode": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        for i in range(len(nums)):\n            for j in range(i + 1, len(nums)):\n                if nums[i] + nums[j] == target:\n                    return [i, j]",
         "timeComplexity": "O(n^2)",
         "spaceComplexity": "O(1)"
       }
@@ -47,9 +47,33 @@
     "solutions": [
       {
         "title": "Stack Solution",
-        "pythonCode": "class Solution:\n    def isValid(s: str) -> bool:\n        dic = {')': '(', ']': '[', '}': '{'}\n        stack = []\n\n        for c in s:\n            if c in dic:\n                if not stack:\n                    return False\n\n                bracket = stack.pop()\n                if dic[c] != bracket:\n                    return False\n            else:\n                stack.append(c)\n\n        return not stack",
+        "pythonCode": "class Solution:\n    def isValid(self, s: str) -> bool:\n        dic = {')': '(', ']': '[', '}': '{'}\n        stack = []\n\n        for c in s:\n            if c in dic:\n                if not stack:\n                    return False\n\n                bracket = stack.pop()\n                if dic[c] != bracket:\n                    return False\n            else:\n                stack.append(c)\n\n        return not stack",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "video": "IL2tJYA38-s?si=dX4d76oTK3w8V-Gs",
+    "solutions": [
+      {
+        "title": "Hash Set",
+        "pythonCode": "class Solution:\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\n        rows = defaultdict(set)\n        cols = defaultdict(set)\n        boxes = defaultdict(set)\n\n        for r in range(9):\n            for c in range(9):\n                val = board[r][c]\n\n                if val == '.':\n                    continue\n                \n                box_index = (r // 3, c // 3)\n\n                if val in rows[r] or val in cols[c] or val in boxes[box_index]:\n                    return False\n\n                rows[r].add(val)\n                cols[c].add(val)\n                boxes[box_index].add(val)\n\n        return True",
+        "timeComplexity": "",
+        "spaceComplexity": ""
+      },
+      {
+        "title": "Brute Force",
+        "pythonCode": "class Solution:\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\n        for r in range(9):\n            seen = set()\n\n            for i in range(9):\n                if board[r][i] == \".\": \n                    continue\n\n                if board[r][i] in seen:\n                    return False\n                \n                seen.add(board[r][i])\n        \n        for c in range(9):\n            seen = set()\n\n            for i in range(9):\n                if board[i][c] == \".\":\n                    continue\n\n                if board[i][c] in seen:\n                    return False\n                \n                seen.add(board[i][c])\n            \n        for b in range(9):\n            seen = set()\n\n            for i in range(3):\n                for j in range(3):\n                    r = (b // 3) * 3 + i\n                    c = (b % 3) * 3 + j\n\n                    if board[r][c] == \".\":\n                        continue\n\n                    if board[r][c] in seen:\n                        return False\n                    \n                    seen.add(board[r][c])\n\n        return True",
+        "timeComplexity": "",
+        "spaceComplexity": ""
+      },
+      {
+        "title": "Bit Mask",
+        "pythonCode": "class Solution:\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\n        rows = [0] * 9\n        cols = [0] * 9\n        boxes = [0] * 9\n\n        for r in range(9):\n            for c in range(9):\n                if board[r][c] == \".\":\n                    continue\n                \n                val = int(board[r][c]) - 1\n\n                if (1 << val) & rows[r]:\n                    return False\n                \n                if (1 << val) & cols[c]:\n                    return False\n                \n                if (1 << val) & boxes[(r // 3) * 3 + (c // 3)]:\n                    return False\n                    \n                rows[r] |= (1 << val)\n                cols[c] |= (1 << val)\n                \n                boxes[(r // 3) * 3 + (c // 3)] |= (1 << val)\n\n        return True",
+        "timeComplexity": "",
+        "spaceComplexity": ""
       }
     ]
   },
@@ -317,13 +341,13 @@
     "solutions": [
       {
         "title": "Recursive Solution",
-        "pythonCode": "class Solution:\n    def reverseString(s: List[str]) -> None:\n        def helper(l, r):\n            if l >= r:\n                return\n            \n            s[l], s[r] = s[r], s[l]\n            helper(l + 1, r - 1)\n\n        helper(0, len(s) - 1)",
+        "pythonCode": "class Solution:\n    def reverseString(self, s: List[str]) -> None:\n        def helper(l, r):\n            if l >= r:\n                return\n            \n            s[l], s[r] = s[r], s[l]\n            helper(l + 1, r - 1)\n\n        helper(0, len(s) - 1)",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
       },
       {
         "title": "Two Pointer Solution",
-        "pythonCode": "class Solution:\n    def reverseString(s: List[str]) -> None:\n        l, r = 0, len(s) - 1\n\n        while l < r:\n            s[l], s[r] = s[r], s[l]\n            l += 1\n            r -= 1",
+        "pythonCode": "class Solution:\n    def reverseString(self, s: List[str]) -> None:\n        l, r = 0, len(s) - 1\n\n        while l < r:\n            s[l], s[r] = s[r], s[l]\n            l += 1\n            r -= 1",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
       }
@@ -335,19 +359,19 @@
     "solutions": [
       {
         "title": "Hash Set Solution",
-        "pythonCode": "class Solution:\n    def intersection(nums1: List[int], nums2: List[int]) -> int:\n        set1 = set(nums1)\n        set2 = set(nums2)\n\n        return list(set1 & set2)",
+        "pythonCode": "class Solution:\n    def intersection(self, nums1: List[int], nums2: List[int]) -> int:\n        set1 = set(nums1)\n        set2 = set(nums2)\n\n        return list(set1 & set2)",
         "timeComplexity": "O(n + m)",
         "spaceComplexity": "O(n + m)"
       },
       {
         "title": "Brute Force Solution",
-        "pythonCode": "class Solution:\n    def intersection(nums1: List[int], nums2: List[int]) -> int:\n        res = []\n\n        for n in nums1:\n            if n in nums2 and n not in res:\n                res.append(n)\n\n        return res",
+        "pythonCode": "class Solution:\n    def intersection(self, nums1: List[int], nums2: List[int]) -> int:\n        res = []\n\n        for n in nums1:\n            if n in nums2 and n not in res:\n                res.append(n)\n\n        return res",
         "timeComplexity": "O(n * m)",
         "spaceComplexity": "O(min(n, m))"
       },
       {
         "title": "Two Pointer Solution - Sorted Arrays",
-        "pythonCode": "class Solution:\n    def intersection(nums1: List[int], nums2: List[int]) -> int:\n        nums1.sort()\n        nums2.sort()\n        i, j = 0, 0\n        res = set()\n\n        while i < len(nums1) and j < len(nums2):\n            if nums1[i] == nums2[j]:\n                res.add(nums1[i])\n                i += 1\n                j += 1\n            elif nums1[i] < nums2[j]:\n                i += 1\n            else:\n                j += 1\n\n        return list(res)",
+        "pythonCode": "class Solution:\n    def intersection(self, nums1: List[int], nums2: List[int]) -> int:\n        nums1.sort()\n        nums2.sort()\n        i, j = 0, 0\n        res = set()\n\n        while i < len(nums1) and j < len(nums2):\n            if nums1[i] == nums2[j]:\n                res.add(nums1[i])\n                i += 1\n                j += 1\n            elif nums1[i] < nums2[j]:\n                i += 1\n            else:\n                j += 1\n\n        return list(res)",
         "timeComplexity": "O(n log n + m log m)",
         "spaceComplexity": "O(min(n, m))"
       }
@@ -389,13 +413,13 @@
     "solutions": [
       {
         "title": "Optimal Solution - Linear Time",
-        "pythonCode": "class Solution:\n    def findClosestNumber(nums: List[int]) -> int:\n        res = float('inf')\n\n        for n in nums:\n            if abs(n) < abs(res):\n                res = n\n            elif abs(n) == abs(res):\n                res = max(n, res)\n\n        return res",
+        "pythonCode": "class Solution:\n    def findClosestNumber(self, nums: List[int]) -> int:\n        res = float('inf')\n\n        for n in nums:\n            if abs(n) < abs(res):\n                res = n\n            elif abs(n) == abs(res):\n                res = max(n, res)\n\n        return res",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
       },
       {
         "title": "Alternative Approach - Sorting",
-        "pythonCode": "class Solution:\n    def findClosestNumber(nums: List[int]) -> int:\n        nums.sort(key=lambda x: (abs(x), -x))\n        return nums[0]",
+        "pythonCode": "class Solution:\n    def findClosestNumber(self, nums: List[int]) -> int:\n        nums.sort(key=lambda x: (abs(x), -x))\n        return nums[0]",
         "timeComplexity": "O(n log n)",
         "spaceComplexity": "O(1)"
       }
