@@ -1,5 +1,5 @@
 {
     "title": "Brute Force",
-    "time_complexity": "O(1)",
-    "space_complexity": "O(1)"
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)"
 }
