@@ -1,5 +1,5 @@
 {
-    "title": "Hash Set",
-    "timeComplexity": "O(1)",
-    "spaceComplexity": "O(1)"
+  "title": "Hash Set",
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(1)"
 }

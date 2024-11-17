@@ -1,5 +1,5 @@
 {
-    "title": "Bit Mask",
-    "timeComplexity": "O(1)",
-    "spaceComplexity": "O(1)"
+  "title": "Bit Mask",
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(1)"
 }
