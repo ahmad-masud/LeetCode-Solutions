@@ -1,7 +1,7 @@
 import os
 import json
 
-def package(root_dir, source_dir):
+def solutions(root_dir, source_dir):
     solutions_data = []
 
     print(f"Root directory: {root_dir}")
@@ -67,5 +67,5 @@ def package(root_dir, source_dir):
 
 # Set the root directory relative to the script's location
 root_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-source_directory = os.path.join(root_directory, 'src')
-package(root_directory, source_directory)
+source_directory = os.path.join(root_directory, 'solutions')
+solutions(root_directory, source_directory)

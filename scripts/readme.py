@@ -30,7 +30,7 @@ def readme():
             problem_link = topic.get('Link', '#')
             problem_name_with_link = f'[{problem_name}]({problem_link})'  # Make the problem name clickable
 
-            problem_path = f'src/{leetcode_id}'
+            problem_path = f'solutions/{leetcode_id}'
 
             # Find all solutions for the problem
             solutions = []
@@ -40,7 +40,7 @@ def readme():
                     if os.path.isdir(solution_dir_path) and solution_dir.startswith('solution'):
                         code_path = os.path.join(solution_dir_path, 'code.py')
                         if os.path.isfile(code_path):
-                            solutions.append(f'[✔️](src/{leetcode_id}/{solution_dir}/code.py)')
+                            solutions.append(f'[✔️](solutions/{leetcode_id}/{solution_dir}/code.py)')
 
             solution_links = ' '.join(solutions) if solutions else '❌'
 
