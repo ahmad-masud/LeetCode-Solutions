@@ -1,5 +1,5 @@
 class Solution:
-    def twoSum(nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         num_map = {}
 
         for i, num in enumerate(nums):

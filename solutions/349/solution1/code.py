@@ -1,5 +1,5 @@
 class Solution:
-    def intersection(nums1: List[int], nums2: List[int]) -> int:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> int:
         res = []
 
         for n in nums1:

@@ -1,5 +1,5 @@
 class Solution:
-    def intersection(nums1: List[int], nums2: List[int]) -> int:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> int:
         set1 = set(nums1)
         set2 = set(nums2)
 

@@ -1,5 +1,5 @@
 class Solution:
-    def reverseString(s: List[str]) -> None:
+    def reverseString(self, s: List[str]) -> None:
         def helper(l, r):
             if l >= r:
                 return

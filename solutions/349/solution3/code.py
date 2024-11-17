@@ -1,5 +1,5 @@
 class Solution:
-    def intersection(nums1: List[int], nums2: List[int]) -> int:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> int:
         nums1.sort()
         nums2.sort()
         i, j = 0, 0

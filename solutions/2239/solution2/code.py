@@ -1,5 +1,5 @@
 class Solution:
-    def findClosestNumber(nums: List[int]) -> int:
+    def findClosestNumber(self, nums: List[int]) -> int:
         res = float('inf')
 
         for n in nums:

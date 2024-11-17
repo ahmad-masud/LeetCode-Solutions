@@ -1,5 +1,5 @@
 class Solution:
-    def isValid(s: str) -> bool:
+    def isValid(self, s: str) -> bool:
         dic = {')': '(', ']': '[', '}': '{'}
         stack = []
 
