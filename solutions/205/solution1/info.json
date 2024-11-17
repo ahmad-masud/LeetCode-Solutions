@@ -1,0 +1,5 @@
+{
+    "approach": "Hash Table Tracking",
+    "time_complexity": "O(n)",
+    "space_complexity": "O(1)"
+}
