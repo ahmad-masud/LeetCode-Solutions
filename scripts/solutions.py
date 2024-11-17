@@ -27,7 +27,7 @@ def solutions(root_dir, source_dir):
                     problem_obj["video"] = video_file.read().strip()
 
             # Collect solutions
-            for solution_dir in os.listdir(problem_path):
+            for solution_dir in sorted(os.listdir(problem_path)):
                 solution_path = os.path.join(problem_path, solution_dir)
                 print(f"Checking solution directory: {solution_path}")
                 if os.path.isdir(solution_path):
