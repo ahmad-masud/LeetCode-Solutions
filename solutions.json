@@ -4,16 +4,16 @@
     "video": "oetyCTdewlU?si=YVht9LVdy8bIOfaa",
     "solutions": [
       {
-        "title": "Optimal Solution - HashMap",
-        "pythonCode": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        num_map = {}\n\n        for i, num in enumerate(nums):\n            diff = target - num\n\n            if diff in num_map:\n                return [num_map[diff], i]\n\n            num_map[num] = i",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(n)"
-      },
-      {
         "title": "Brute Force Solution",
         "pythonCode": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        for i in range(len(nums)):\n            for j in range(i + 1, len(nums)):\n                if nums[i] + nums[j] == target:\n                    return [i, j]",
         "timeComplexity": "O(n^2)",
         "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Optimal Solution - HashMap",
+        "pythonCode": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        num_map = {}\n\n        for i, num in enumerate(nums):\n            diff = target - num\n\n            if diff in num_map:\n                return [num_map[diff], i]\n\n            num_map[num] = i",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
       }
     ]
   },
@@ -58,14 +58,14 @@
     "video": "IL2tJYA38-s?si=dX4d76oTK3w8V-Gs",
     "solutions": [
       {
-        "title": "Hash Set",
-        "pythonCode": "class Solution:\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\n        rows = defaultdict(set)\n        cols = defaultdict(set)\n        boxes = defaultdict(set)\n\n        for r in range(9):\n            for c in range(9):\n                val = board[r][c]\n\n                if val == '.':\n                    continue\n                \n                box_index = (r // 3, c // 3)\n\n                if val in rows[r] or val in cols[c] or val in boxes[box_index]:\n                    return False\n\n                rows[r].add(val)\n                cols[c].add(val)\n                boxes[box_index].add(val)\n\n        return True",
+        "title": "Brute Force",
+        "pythonCode": "class Solution:\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\n        for r in range(9):\n            seen = set()\n\n            for i in range(9):\n                if board[r][i] == \".\": \n                    continue\n\n                if board[r][i] in seen:\n                    return False\n                \n                seen.add(board[r][i])\n        \n        for c in range(9):\n            seen = set()\n\n            for i in range(9):\n                if board[i][c] == \".\":\n                    continue\n\n                if board[i][c] in seen:\n                    return False\n                \n                seen.add(board[i][c])\n            \n        for b in range(9):\n            seen = set()\n\n            for i in range(3):\n                for j in range(3):\n                    r = (b // 3) * 3 + i\n                    c = (b % 3) * 3 + j\n\n                    if board[r][c] == \".\":\n                        continue\n\n                    if board[r][c] in seen:\n                        return False\n                    \n                    seen.add(board[r][c])\n\n        return True",
         "timeComplexity": "O(1)",
         "spaceComplexity": "O(1)"
       },
       {
-        "title": "Brute Force",
-        "pythonCode": "class Solution:\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\n        for r in range(9):\n            seen = set()\n\n            for i in range(9):\n                if board[r][i] == \".\": \n                    continue\n\n                if board[r][i] in seen:\n                    return False\n                \n                seen.add(board[r][i])\n        \n        for c in range(9):\n            seen = set()\n\n            for i in range(9):\n                if board[i][c] == \".\":\n                    continue\n\n                if board[i][c] in seen:\n                    return False\n                \n                seen.add(board[i][c])\n            \n        for b in range(9):\n            seen = set()\n\n            for i in range(3):\n                for j in range(3):\n                    r = (b // 3) * 3 + i\n                    c = (b % 3) * 3 + j\n\n                    if board[r][c] == \".\":\n                        continue\n\n                    if board[r][c] in seen:\n                        return False\n                    \n                    seen.add(board[r][c])\n\n        return True",
+        "title": "Hash Set",
+        "pythonCode": "class Solution:\n    def isValidSudoku(self, board: List[List[str]]) -> bool:\n        rows = defaultdict(set)\n        cols = defaultdict(set)\n        boxes = defaultdict(set)\n\n        for r in range(9):\n            for c in range(9):\n                val = board[r][c]\n\n                if val == '.':\n                    continue\n                \n                box_index = (r // 3, c // 3)\n\n                if val in rows[r] or val in cols[c] or val in boxes[box_index]:\n                    return False\n\n                rows[r].add(val)\n                cols[c].add(val)\n                boxes[box_index].add(val)\n\n        return True",
         "timeComplexity": "O(1)",
         "spaceComplexity": "O(1)"
       },
@@ -82,15 +82,15 @@
     "video": "zfBUOrv1u4k?si=P3USqAXRpTLHMnbf",
     "solutions": [
       {
-        "title": "Kadane's Algorithm",
-        "pythonCode": "class Solution:\n    def maxSubArray(self, nums: List[int]) -> int:\n        res = float('-inf')\n        curr = 0\n\n        for n in nums:\n            curr += n\n            res = max(res, curr)\n\n            if curr < 0:\n                curr = 0\n\n        return res",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(1)"
-      },
-      {
         "title": "Brute Force Solution",
         "pythonCode": "class Solution:\n    def maxSubArray(self, nums: List[int]) -> int:\n        max_sum = float('-inf')\n\n        for i in range(len(nums)):\n            curr_sum = 0\n            for j in range(i, len(nums)):\n                curr_sum += nums[j]\n                max_sum = max(max_sum, curr_sum)\n\n        return max_sum",
         "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Kadane's Algorithm",
+        "pythonCode": "class Solution:\n    def maxSubArray(self, nums: List[int]) -> int:\n        res = float('-inf')\n        curr = 0\n\n        for n in nums:\n            curr += n\n            res = max(res, curr)\n\n            if curr < 0:\n                curr = 0\n\n        return res",
+        "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
       }
     ]
@@ -100,16 +100,16 @@
     "video": "GHtOJN7RX-0?si=A1OHau29Wj7RQsUY",
     "solutions": [
       {
-        "title": "Iterative Solution",
-        "pythonCode": "class Solution:\n    def subsets(self, nums: List[int]) -> List[List[int]]:\n        res = [[]]\n\n        for n in nums:\n            res += [curr + [n] for curr in res]\n\n        return res",
-        "timeComplexity": "O(2^n * n)",
-        "spaceComplexity": "O(2^n)"
-      },
-      {
         "title": "Backtracking Solution",
         "pythonCode": "class Solution:\n    def subsets(self, nums: List[int]) -> List[List[int]]:\n        res = []\n\n        def backtrack(i: int, curr: List[int]) -> None:\n            if i == len(nums):\n                res.append(curr)\n                return\n\n            backtrack(i + 1, curr + [nums[i]])\n            backtrack(i + 1, curr)\n\n        backtrack(0, [])\n        return res",
         "timeComplexity": "O(2^n * n)",
         "spaceComplexity": "O(2^n * n)"
+      },
+      {
+        "title": "Iterative Solution",
+        "pythonCode": "class Solution:\n    def subsets(self, nums: List[int]) -> List[List[int]]:\n        res = [[]]\n\n        for n in nums:\n            res += [curr + [n] for curr in res]\n\n        return res",
+        "timeComplexity": "O(2^n * n)",
+        "spaceComplexity": "O(2^n)"
       }
     ]
   },
@@ -118,14 +118,14 @@
     "video": "MR-F70Hawo8?si=YXJUh-30v4xd-PLh",
     "solutions": [
       {
-        "title": "Iterative Solution",
-        "pythonCode": "class Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n        stack = []\n        curr = root\n\n        while curr or stack:\n            while curr:\n                stack.append(curr)\n                curr = curr.left\n\n            curr = stack.pop()\n            res.append(curr.val)\n            curr = curr.right\n\n        return res",
+        "title": "Recursive Solution",
+        "pythonCode": "class Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n\n        def dfs(node):\n            if not node:\n                return\n\n            dfs(node.left)\n            res.append(node.val)\n            dfs(node.right)\n\n        dfs(root)\n        return res",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
       },
       {
-        "title": "Recursive Solution",
-        "pythonCode": "class Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n\n        def dfs(node):\n            if not node:\n                return\n\n            dfs(node.left)\n            res.append(node.val)\n            dfs(node.right)\n\n        dfs(root)\n        return res",
+        "title": "Iterative Solution",
+        "pythonCode": "class Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n        stack = []\n        curr = root\n\n        while curr or stack:\n            while curr:\n                stack.append(curr)\n                curr = curr.left\n\n            curr = stack.pop()\n            res.append(curr.val)\n            curr = curr.right\n\n        return res",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
       }
@@ -160,8 +160,20 @@
     "video": "YcusSSCLmKQ?si=HaWWVb-YQGNyZv7z",
     "solutions": [
       {
+        "title": "Brute Force Solution - Using Count",
+        "pythonCode": "class Solution:\n    def singleNumber(self, nums: List[int]) -> int:\n        for n in nums:\n            if nums.count(n) == 1:\n                return n",
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)"
+      },
+      {
         "title": "Hash Table Solution",
         "pythonCode": "class Solution:\n    def singleNumber(self, nums: List[int]) -> int:\n        hash_table = {}\n\n        for n in nums:\n            hash_table[n] = hash_table.get(n, 0) + 1\n\n        for n, count in hash_table.items():\n            if count == 1:\n                return n",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Math Set Solution",
+        "pythonCode": "class Solution:\n    def singleNumber(self, nums: List[int]) -> int:\n        return 2 * sum(set(nums)) - sum(nums)",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
       },
@@ -170,18 +182,6 @@
         "pythonCode": "class Solution:\n    def singleNumber(self, nums: List[int]) -> int:\n        res = 0\n\n        for n in nums:\n            res ^= n\n\n        return res",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
-      },
-      {
-        "title": "Brute Force Solution - Using Count",
-        "pythonCode": "class Solution:\n    def singleNumber(self, nums: List[int]) -> int:\n        for n in nums:\n            if nums.count(n) == 1:\n                return n",
-        "timeComplexity": "O(n^2)",
-        "spaceComplexity": "O(1)"
-      },
-      {
-        "title": "Math Set Solution",
-        "pythonCode": "class Solution:\n    def singleNumber(self, nums: List[int]) -> int:\n        return 2 * sum(set(nums)) - sum(nums)",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(n)"
       }
     ]
   },
@@ -202,14 +202,14 @@
     "video": null,
     "solutions": [
       {
-        "title": "Count Bits Using Bit Manipulation Trick",
-        "pythonCode": "class Solution:\n    def hammingWeight(self, n: int) -> int:\n        res = 0\n\n        while n:\n            n &= n - 1\n            res += 1\n\n        return res",
+        "title": "Count Bits with Bitwise AND",
+        "pythonCode": "class Solution:\n    def hammingWeight(self, n: int) -> int:\n        res = 0\n\n        while n:\n            res += n & 1\n            n >>= 1\n\n        return res",
         "timeComplexity": "O(1)",
         "spaceComplexity": "O(1)"
       },
       {
-        "title": "Count Bits with Bitwise AND",
-        "pythonCode": "class Solution:\n    def hammingWeight(self, n: int) -> int:\n        res = 0\n\n        while n:\n            res += n & 1\n            n >>= 1\n\n        return res",
+        "title": "Count Bits Using Bit Manipulation Trick",
+        "pythonCode": "class Solution:\n    def hammingWeight(self, n: int) -> int:\n        res = 0\n\n        while n:\n            n &= n - 1\n            res += 1\n\n        return res",
         "timeComplexity": "O(1)",
         "spaceComplexity": "O(1)"
       }
@@ -220,16 +220,16 @@
     "video": "ScvAGc6yBs4?si=qRcnTKoBhYhbcKZT",
     "solutions": [
       {
-        "title": "Breadth-First Search (BFS) Solution",
-        "pythonCode": "class Solution:\n    def numIslands(self, grid: List[List[str]]) -> int:\n        ROWS, COLS = len(grid), len(grid[0])\n        res = 0\n\n        def bfs(r: int, c: int) -> None:\n            queue = deque([(r, c)])\n            grid[r][c] = '0'\n\n            while queue:\n                row, col = queue.popleft()\n\n                for dr, dc in [(1, 0), (-1, 0), (0, 1), (0, -1)]:\n                    nr, nc = row + dr, col + dc\n\n                    if 0 <= nr < ROWS and 0 <= nc < COLS and grid[nr][nc] == '1':\n                        grid[nr][nc] = '0'\n                        queue.append((nr, nc))\n\n        for r in range(ROWS):\n            for c in range(COLS):\n                if grid[r][c] == '1':\n                    res += 1\n                    bfs(r, c)\n\n        return res",
-        "timeComplexity": "O(n * m)",
-        "spaceComplexity": "O(min(n, m))"
-      },
-      {
         "title": "Depth-First Search (DFS) Solution",
         "pythonCode": "class Solution:\n    def numIslands(self, grid: List[List[str]]) -> int:\n        ROWS, COLS = len(grid), len(grid[0])\n        res = 0\n\n        def dfs(r: int, c: int) -> None:\n            if r < 0 or c < 0 or r >= ROWS or c >= COLS or grid[r][c] == '0':\n                return\n\n            grid[r][c] = '0'\n\n            dfs(r + 1, c)\n            dfs(r - 1, c)\n            dfs(r, c + 1)\n            dfs(r, c - 1)\n\n        for r in range(ROWS):\n            for c in range(COLS):\n                if grid[r][c] == '1':\n                    res += 1\n                    dfs(r, c)\n\n        return res",
         "timeComplexity": "O(n * m)",
         "spaceComplexity": "O(n * m)"
+      },
+      {
+        "title": "Breadth-First Search (BFS) Solution",
+        "pythonCode": "class Solution:\n    def numIslands(self, grid: List[List[str]]) -> int:\n        ROWS, COLS = len(grid), len(grid[0])\n        res = 0\n\n        def bfs(r: int, c: int) -> None:\n            queue = deque([(r, c)])\n            grid[r][c] = '0'\n\n            while queue:\n                row, col = queue.popleft()\n\n                for dr, dc in [(1, 0), (-1, 0), (0, 1), (0, -1)]:\n                    nr, nc = row + dr, col + dc\n\n                    if 0 <= nr < ROWS and 0 <= nc < COLS and grid[nr][nc] == '1':\n                        grid[nr][nc] = '0'\n                        queue.append((nr, nc))\n\n        for r in range(ROWS):\n            for c in range(COLS):\n                if grid[r][c] == '1':\n                    res += 1\n                    bfs(r, c)\n\n        return res",
+        "timeComplexity": "O(n * m)",
+        "spaceComplexity": "O(min(n, m))"
       }
     ]
   },
@@ -250,16 +250,16 @@
     "video": "skePaM3nA2w?si=dG_NH3eyfnq5FMyE",
     "solutions": [
       {
-        "title": "Recursive Solution",
-        "pythonCode": "class Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        if not head or not head.next:\n            return head\n\n        reversed_head = reverseList(head.next)\n        head.next.next = head\n        head.next = None\n\n        return reversed_head",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(n)"
-      },
-      {
         "title": "Iterative Solution",
         "pythonCode": "class Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev = None\n        curr = head\n\n        while curr:\n            next_node = curr.next\n            curr.next = prev\n            prev = curr\n            curr = next_node\n\n        return prev",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Recursive Solution",
+        "pythonCode": "class Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        if not head or not head.next:\n            return head\n\n        reversed_head = reverseList(head.next)\n        head.next.next = head\n        head.next = None\n\n        return reversed_head",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
       }
     ]
   },
@@ -268,15 +268,15 @@
     "video": "qgsXwaG2nvs?si=wpkI_l6-E8zZjpzM",
     "solutions": [
       {
-        "title": "Sliding Window Solution",
-        "pythonCode": "class Solution:\n    def minSubArrayLen(self, target: int, nums: List[int]) -> int:\n        l = 0\n        prefix_sum = 0\n        res = float('inf')\n\n        for r in range(len(nums)):\n            prefix_sum += nums[r]\n\n            while prefix_sum >= target:\n                res = min(res, r - l + 1)\n                prefix_sum -= nums[l]\n                l += 1\n\n        return res if res != float('inf') else 0",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(1)"
-      },
-      {
         "title": "Brute Force Solution",
         "pythonCode": "class Solution:\n    def minSubArrayLen(self, target: int, nums: List[int]) -> int:\n        res = float('inf')\n\n        for i in range(len(nums)):\n            curr_sum = 0\n\n            for j in range(i, len(nums)):\n                curr_sum += nums[j]\n\n                if curr_sum >= target:\n                    res = min(res, j - i + 1)\n                    break\n\n        return res if res != float('inf') else 0",
         "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Sliding Window Solution",
+        "pythonCode": "class Solution:\n    def minSubArrayLen(self, target: int, nums: List[int]) -> int:\n        l = 0\n        prefix_sum = 0\n        res = float('inf')\n\n        for r in range(len(nums)):\n            prefix_sum += nums[r]\n\n            while prefix_sum >= target:\n                res = min(res, r - l + 1)\n                prefix_sum -= nums[l]\n                l += 1\n\n        return res if res != float('inf') else 0",
+        "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
       }
     ]
@@ -286,32 +286,14 @@
     "video": "HXqyNLDyqp0?si=EFcH5z_209mPw-YR",
     "solutions": [
       {
-        "title": "Using a Hash Set",
-        "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        seen = set()\n\n        for n in nums:\n            if n in seen:\n                return True\n            \n            seen.add(n)\n            \n        return False",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(n)"
-      },
-      {
-        "title": "Using Python's len Comparison with a Set",
-        "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        return len(nums) != len(set(nums))",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(n)"
-      },
-      {
-        "title": "Using a Counter",
-        "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        count = Counter(nums)\n\n        for key in count:\n            if count[key] > 1:\n                return True\n            \n        return False\n",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(n)"
-      },
-      {
         "title": "Brute-Force Approach",
         "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        for i in range(len(nums)):\n            for j in range(i + 1, len(nums)):\n                if nums[i] == nums[j]:\n                    return True\n                \n        return False",
         "timeComplexity": "O(n^2)",
         "spaceComplexity": "O(1)"
       },
       {
-        "title": "Using a Dictionary",
-        "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        counts = {}\n\n        for n in nums:\n            if n in counts:\n                return True\n            \n            counts[n] = 1\n\n        return False",
+        "title": "Using a Hash Set",
+        "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        seen = set()\n\n        for n in nums:\n            if n in seen:\n                return True\n            \n            seen.add(n)\n            \n        return False",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
       },
@@ -320,6 +302,24 @@
         "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        nums.sort()\n        \n        for i in range(1, len(nums)):\n            if nums[i] == nums[i - 1]:\n                return True\n            \n        return False",
         "timeComplexity": "O(nlogn)",
         "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Using a Counter",
+        "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        count = Counter(nums)\n\n        for key in count:\n            if count[key] > 1:\n                return True\n            \n        return False\n",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Using a Dictionary",
+        "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        counts = {}\n\n        for n in nums:\n            if n in counts:\n                return True\n            \n            counts[n] = 1\n\n        return False",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Using Python's len Comparison with a Set",
+        "pythonCode": "class Solution:\n    def containsDuplicate(self, nums):\n        return len(nums) != len(set(nums))",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
       }
     ]
   },
@@ -352,26 +352,26 @@
     "video": "KG9GTX9oqss?si=IIPKz_m82uKnPfSe",
     "solutions": [
       {
-        "title": "Array Counting for Fixed Alphabet",
-        "pythonCode": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        if len(s) != len(t):\n            return False\n\n        count = [0] * 26\n\n        for c in s:\n            count[ord(c) - ord('a')] += 1\n\n        for c in t:\n            count[ord(c) - ord('a')] -= 1\n\n            if count[ord(c) - ord('a')] < 0:\n                return False\n\n        return True",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(1)"
-      },
-      {
-        "title": "Hash Table Character Frequency Count",
-        "pythonCode": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        return Counter(s) == Counter(t)",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(1)"
-      },
-      {
         "title": "Sorting and Comparison",
         "pythonCode": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        return sorted(s) == sorted(t)",
         "timeComplexity": "O(n log n)",
         "spaceComplexity": "O(n)"
       },
       {
+        "title": "Array Counting for Fixed Alphabet",
+        "pythonCode": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        if len(s) != len(t):\n            return False\n\n        count = [0] * 26\n\n        for c in s:\n            count[ord(c) - ord('a')] += 1\n\n        for c in t:\n            count[ord(c) - ord('a')] -= 1\n\n            if count[ord(c) - ord('a')] < 0:\n                return False\n\n        return True",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)"
+      },
+      {
         "title": "Manual Hash Table Implementation",
         "pythonCode": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        if len(s) != len(t):\n            return False\n\n        count = {}\n\n        for c in s:\n            count[c] = count.get(c, 0) + 1\n\n        for c in t:\n            if c not in count or count[c] == 0:\n                return False\n            \n            count[c] -= 1\n\n        for n in count.values():\n            if n != 0:\n                return False\n\n        return True",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Hash Table Character Frequency Count",
+        "pythonCode": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        return Counter(s) == Counter(t)",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
       }
@@ -382,16 +382,16 @@
     "video": "QmvMuRcnIZ8?si=yll0E7OyDREY5ogu",
     "solutions": [
       {
-        "title": "Recursive Solution",
-        "pythonCode": "class Solution:\n    def reverseString(self, s: List[str]) -> None:\n        def helper(l, r):\n            if l >= r:\n                return\n            \n            s[l], s[r] = s[r], s[l]\n            helper(l + 1, r - 1)\n\n        helper(0, len(s) - 1)",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(n)"
-      },
-      {
         "title": "Two Pointer Solution",
         "pythonCode": "class Solution:\n    def reverseString(self, s: List[str]) -> None:\n        l, r = 0, len(s) - 1\n\n        while l < r:\n            s[l], s[r] = s[r], s[l]\n            l += 1\n            r -= 1",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Recursive Solution",
+        "pythonCode": "class Solution:\n    def reverseString(self, s: List[str]) -> None:\n        def helper(l, r):\n            if l >= r:\n                return\n            \n            s[l], s[r] = s[r], s[l]\n            helper(l + 1, r - 1)\n\n        helper(0, len(s) - 1)",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
       }
     ]
   },
@@ -400,16 +400,16 @@
     "video": "Lcj_cuZUy68?si=3Gqo9JgWimF9MuRB",
     "solutions": [
       {
-        "title": "Hash Set Solution",
-        "pythonCode": "class Solution:\n    def intersection(self, nums1: List[int], nums2: List[int]) -> int:\n        set1 = set(nums1)\n        set2 = set(nums2)\n\n        return list(set1 & set2)",
-        "timeComplexity": "O(n + m)",
-        "spaceComplexity": "O(n + m)"
-      },
-      {
         "title": "Brute Force Solution",
         "pythonCode": "class Solution:\n    def intersection(self, nums1: List[int], nums2: List[int]) -> int:\n        res = []\n\n        for n in nums1:\n            if n in nums2 and n not in res:\n                res.append(n)\n\n        return res",
         "timeComplexity": "O(n * m)",
         "spaceComplexity": "O(min(n, m))"
+      },
+      {
+        "title": "Hash Set Solution",
+        "pythonCode": "class Solution:\n    def intersection(self, nums1: List[int], nums2: List[int]) -> int:\n        set1 = set(nums1)\n        set2 = set(nums2)\n\n        return list(set1 & set2)",
+        "timeComplexity": "O(n + m)",
+        "spaceComplexity": "O(n + m)"
       },
       {
         "title": "Two Pointer Solution - Sorted Arrays",
@@ -424,16 +424,16 @@
     "video": "PBnAF8zxBVw?si=w7JuvitYAtMSDsSI",
     "solutions": [
       {
-        "title": "Recursive Binary Search",
-        "pythonCode": "class Solution:\n    def search(self, nums: List[int], target: int) -> int:\n        def binary_search(l, r):\n            if l > r:\n                return -1\n\n            m = l + (r - l) // 2\n\n            if nums[m] == target:\n                return m\n            elif nums[m] < target:\n                return binary_search(m + 1, r)\n            else:\n                return binary_search(l, m - 1)\n\n        return binary_search(0, len(nums) - 1)",
-        "timeComplexity": "O(log n)",
-        "spaceComplexity": "O(log n)"
-      },
-      {
         "title": "Iterative Binary Search",
         "pythonCode": "class Solution:\n    def search(self, nums: List[int], target: int) -> int:\n        l, r = 0, len(nums) - 1\n\n        while l <= r:\n            m = l + (r - l) // 2\n\n            if nums[m] == target:\n                return m\n            elif nums[m] < target:\n                l = m + 1\n            else:\n                r = m - 1\n\n        return -1",
         "timeComplexity": "O(log n)",
         "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Recursive Binary Search",
+        "pythonCode": "class Solution:\n    def search(self, nums: List[int], target: int) -> int:\n        def binary_search(l, r):\n            if l > r:\n                return -1\n\n            m = l + (r - l) // 2\n\n            if nums[m] == target:\n                return m\n            elif nums[m] < target:\n                return binary_search(m + 1, r)\n            else:\n                return binary_search(l, m - 1)\n\n        return binary_search(0, len(nums) - 1)",
+        "timeComplexity": "O(log n)",
+        "spaceComplexity": "O(log n)"
       }
     ]
   },
@@ -454,15 +454,15 @@
     "video": "8VOP4Mm4nFs?si=GMR-G8DNP7sHt-s8",
     "solutions": [
       {
-        "title": "Optimal Solution - Linear Time",
-        "pythonCode": "class Solution:\n    def findClosestNumber(self, nums: List[int]) -> int:\n        res = float('inf')\n\n        for n in nums:\n            if abs(n) < abs(res):\n                res = n\n            elif abs(n) == abs(res):\n                res = max(n, res)\n\n        return res",
-        "timeComplexity": "O(n)",
-        "spaceComplexity": "O(1)"
-      },
-      {
         "title": "Alternative Approach - Sorting",
         "pythonCode": "class Solution:\n    def findClosestNumber(self, nums: List[int]) -> int:\n        nums.sort(key=lambda x: (abs(x), -x))\n        return nums[0]",
         "timeComplexity": "O(n log n)",
+        "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Optimal Solution - Linear Time",
+        "pythonCode": "class Solution:\n    def findClosestNumber(self, nums: List[int]) -> int:\n        res = float('inf')\n\n        for n in nums:\n            if abs(n) < abs(res):\n                res = n\n            elif abs(n) == abs(res):\n                res = max(n, res)\n\n        return res",
+        "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
       }
     ]
