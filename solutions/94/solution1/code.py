@@ -15,4 +15,4 @@ class Solution:
         res.append(root.val)
         res.extend(self.inorderTraversal(root.right))
         
-        return  res
+        return res
