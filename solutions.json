@@ -119,7 +119,7 @@
     "solutions": [
       {
         "title": "Recursive Solution",
-        "pythonCode": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        if not root:\n            return []\n\n        res = []\n\n        res.extend(self.inorderTraversal(root.left))\n        res.append(root.val)\n        res.extend(self.inorderTraversal(root.right))\n        \n        return  res\n",
+        "pythonCode": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        if not root:\n            return []\n\n        res = []\n\n        res.extend(self.inorderTraversal(root.left))\n        res.append(root.val)\n        res.extend(self.inorderTraversal(root.right))\n        \n        return res\n",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
       },
