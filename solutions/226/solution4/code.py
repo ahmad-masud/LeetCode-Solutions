@@ -10,6 +10,7 @@ class Solution:
             return None
 
         curr = root
+        
         while curr:
             curr.left, curr.right = curr.right, curr.left
             curr = curr.left
