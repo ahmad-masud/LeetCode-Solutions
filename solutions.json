@@ -281,7 +281,7 @@
       },
       {
         "title": "Recursive Solution",
-        "pythonCode": "class Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        if not head or not head.next:\n            return head\n\n        reversed_head = reverseList(head.next)\n        head.next.next = head\n        head.next = None\n\n        return reversed_head",
+        "pythonCode": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        if not head or not head.next:\n            return head\n\n        reversed_head = reverseList(head.next)\n        head.next.next = head\n        head.next = None\n\n        return reversed_head\n",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
       }
