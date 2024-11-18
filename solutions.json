@@ -348,6 +348,36 @@
     ]
   },
   {
+    "id": 226,
+    "video": "njhJLhgM8jw?si=CA70QIT6L4PotYB5",
+    "solutions": [
+      {
+        "title": "Recursive DFS",
+        "pythonCode": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\n        if not root:\n            return None\n\n        if not root.left and not root.right:\n            return root\n\n        root.left, root.right = root.right, root.left\n\n        self.invertTree(root.left)\n        self.invertTree(root.right)\n\n        return root",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Iterative DFS",
+        "pythonCode": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\n        if root is None:\n            return None\n\n        stack = [root]\n\n        while stack:\n            node = stack.pop()\n            node.left, node.right = node.right, node.left\n            \n            if node.left:\n                stack.append(node.left)\n                \n            if node.right:\n                stack.append(node.right)\n\n        return root",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Iterative BFS",
+        "pythonCode": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\n        if root is None:\n            return None\n\n        queue = [root]\n\n        while queue:\n            node = queue.pop(0)\n            node.left, node.right = node.right, node.left\n            \n            if node.left:\n                queue.append(node.left)\n\n            if node.right:\n                queue.append(node.right)\n\n        return root",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Morris Traversal",
+        "pythonCode": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\n        if root is None:\n            return None\n\n        curr = root\n        \n        while curr:\n            curr.left, curr.right = curr.right, curr.left\n            curr = curr.left\n\n        if root:\n            curr = root.right\n\n            while curr:\n                curr.left, curr.right = curr.right, curr.left\n                curr = curr.left\n\n        return root",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)"
+      }
+    ]
+  },
+  {
     "id": 228,
     "video": "9TzRVIW3Gpk?si=iZYrbL40MzcJuWcM",
     "solutions": [
