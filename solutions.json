@@ -125,7 +125,7 @@
       },
       {
         "title": "Iterative Solution",
-        "pythonCode": "class Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n        stack = []\n        curr = root\n\n        while curr or stack:\n            while curr:\n                stack.append(curr)\n                curr = curr.left\n\n            curr = stack.pop()\n            res.append(curr.val)\n            curr = curr.right\n\n        return res",
+        "pythonCode": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:\n        res = []\n        stack = []\n        curr = root\n\n        while curr or stack:\n            while curr:\n                stack.append(curr)\n                curr = curr.left\n\n            curr = stack.pop()\n            res.append(curr.val)\n            curr = curr.right\n\n        return res\n",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(n)"
       }
