@@ -132,6 +132,30 @@
     ]
   },
   {
+    "id": 104,
+    "video": "mypx8ttap7s?si=lSIz4UgxC5vOhQDQ",
+    "solutions": [
+      {
+        "title": "Recursive DFS",
+        "pythonCode": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def maxDepth(self, root: Optional[TreeNode]) -> int:\n        if not root:\n            return 0\n\n        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Iterative DFS",
+        "pythonCode": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def maxDepth(self, root: Optional[TreeNode]) -> int:\n        if not root:\n            return 0\n\n        stack = [(root, 1)]\n        res = 0\n\n        while stack:\n            node, depth = stack.pop()\n            res = max(res, depth)\n\n            if node.left:\n                stack.append((node.left, depth + 1))\n                \n            if node.right:\n                stack.append((node.right, depth + 1))\n\n        return res",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Iterative BFS",
+        "pythonCode": " # Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def maxDepth(self, root: Optional[TreeNode]) -> int:\n        if not root:\n            return 0\n\n        queue = deque([(root, 1)])\n        res = 0\n\n        while queue:\n            node, depth = queue.popleft()\n            res = max(res, depth)\n\n            if node.left:\n                queue.append((node.left, depth + 1))\n\n            if node.right:\n                queue.append((node.right, depth + 1))\n\n        return res",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      }
+    ]
+  },
+  {
     "id": 121,
     "video": "t5D4F67kmM0?si=hhnGUi3SmfaiITXZ",
     "solutions": [
