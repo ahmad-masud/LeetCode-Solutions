@@ -713,5 +713,40 @@
         "Link": "https://leetcode.com/problems/valid-parenthesis-string"
       }
     ]
+  },
+  {
+    "name": "math",
+    "data": [
+      {
+        "ID": 202,
+        "Title": "Happy Number",
+        "Link": "https://leetcode.com/problems/happy-number"
+      },
+      {
+        "ID": 66,
+        "Title": "Plus One",
+        "Link": "https://leetcode.com/problems/plus-one"
+      },
+      {
+        "ID": 50,
+        "Title": "Pow(x, n)",
+        "Link": "https://leetcode.com/problems/powx-n"
+      },
+      {
+        "ID": 48,
+        "Title": "Rotate Image",
+        "Link": "https://leetcode.com/problems/rotate-image"
+      },
+      {
+        "ID": 54,
+        "Title": "Spiral Matrix",
+        "Link": "https://leetcode.com/problems/spiral-matrix"
+      },
+      {
+        "ID": 73,
+        "Title": "Set Matrix Zeroes",
+        "Link": "https://leetcode.com/problems/set-matrix-zeroes"
+      }
+    ]
   }
 ]
