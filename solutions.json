@@ -450,6 +450,30 @@
     ]
   },
   {
+    "id": 347,
+    "video": "-kBTgY7E0EU?si=w2wfHWgAdTk1zDKd",
+    "solutions": [
+      {
+        "title": "Sorting Approach",
+        "pythonCode": "class Solution:\n    def topKFrequent(self, nums: List[int], k: int) -> List[int]:\n        count = Counter(nums)\n        freq = sorted(count.keys(), key=lambda x: count[x], reverse=True)\n        \n        return freq[:k]",
+        "timeComplexity": "O(nlogn)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Heap Approach",
+        "pythonCode": "class Solution:\n    def topKFrequent(self, nums: List[int], k: int) -> List[int]:\n        count = Counter(nums)\n        heap = []\n\n        for n, c in count.items():\n            heapq.heappush(heap, (c, n))\n\n            if len(heap) > k:\n                heapq.heappop(heap)\n        \n        return [n for c, n in heap]",
+        "timeComplexity": "O(nlogk)",
+        "spaceComplexity": "O(n + k)"
+      },
+      {
+        "title": "Bucket Sort Approach",
+        "pythonCode": "class Solution:\n    def topKFrequent(self, nums: List[int], k: int) -> List[int]:\n        count = Counter(nums)\n        bucket = [[] for _ in range(len(nums) + 1)]\n\n        for n, c in count.items():\n            bucket[c].append(n)\n        \n        res = []\n\n        for i in range(len(bucket) - 1, 0, -1):\n            for n in bucket[i]:\n                res.append(n)\n\n                if len(res) == k:\n                    return res",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      }
+    ]
+  },
+  {
     "id": 349,
     "video": "Lcj_cuZUy68?si=3Gqo9JgWimF9MuRB",
     "solutions": [
