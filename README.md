@@ -17,7 +17,7 @@
 | ----------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | 1           | [Two Sum](https://leetcode.com/problems/two-sum)                                           | [✔️](solutions/1/solution1/code.py) [✔️](solutions/1/solution2/code.py)                                                                                                                                                             | [✔️](https://www.youtube.com/embed/oetyCTdewlU?si=YVht9LVdy8bIOfaa) |
 | 136         | [Single Number](https://leetcode.com/problems/single-number)                               | [✔️](solutions/136/solution1/code.py) [✔️](solutions/136/solution2/code.py) [✔️](solutions/136/solution3/code.py) [✔️](solutions/136/solution4/code.py)                                                                             | [✔️](https://www.youtube.com/embed/YcusSSCLmKQ?si=HaWWVb-YQGNyZv7z) |
-| 347         | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)           | ❌                                                                                                                                                                                                                                  | ❌                                                                  |
+| 347         | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)           | [✔️](solutions/347/solution1/code.py) [✔️](solutions/347/solution2/code.py) [✔️](solutions/347/solution3/code.py)                                                                                                                   | [✔️](https://www.youtube.com/embed/-kBTgY7E0EU?si=w2wfHWgAdTk1zDKd) |
 | 349         | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays)     | [✔️](solutions/349/solution1/code.py) [✔️](solutions/349/solution2/code.py) [✔️](solutions/349/solution3/code.py)                                                                                                                   | [✔️](https://www.youtube.com/embed/Lcj_cuZUy68?si=3Gqo9JgWimF9MuRB) |
 | 242         | [Valid Anagram](https://leetcode.com/problems/valid-anagram)                               | [✔️](solutions/242/solution1/code.py) [✔️](solutions/242/solution2/code.py) [✔️](solutions/242/solution3/code.py) [✔️](solutions/242/solution4/code.py)                                                                             | [✔️](https://www.youtube.com/embed/KG9GTX9oqss?si=IIPKz_m82uKnPfSe) |
 | 205         | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings)                     | [✔️](solutions/205/solution1/code.py)                                                                                                                                                                                               | [✔️](https://www.youtube.com/embed/vlyFirJRYjE?si=e1eUJe_B6afb8yNT) |
@@ -122,14 +122,14 @@
 
 ## Heaps
 
-| LeetCode ID | Problem Name                                                                                     | Solutions | Video |
-| ----------- | ------------------------------------------------------------------------------------------------ | --------- | ----- |
-| 215         | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array) | ❌        | ❌    |
-| 347         | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)                 | ❌        | ❌    |
-| 973         | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin)           | ❌        | ❌    |
-| 703         | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream) | ❌        | ❌    |
-| 295         | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream)       | ❌        | ❌    |
-| 1046        | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight)                             | ❌        | ❌    |
+| LeetCode ID | Problem Name                                                                                     | Solutions                                                                                                         | Video                                                               |
+| ----------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 215         | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array) | ❌                                                                                                                | ❌                                                                  |
+| 347         | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)                 | [✔️](solutions/347/solution1/code.py) [✔️](solutions/347/solution2/code.py) [✔️](solutions/347/solution3/code.py) | [✔️](https://www.youtube.com/embed/-kBTgY7E0EU?si=w2wfHWgAdTk1zDKd) |
+| 973         | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin)           | ❌                                                                                                                | ❌                                                                  |
+| 703         | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream) | ❌                                                                                                                | ❌                                                                  |
+| 295         | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream)       | ❌                                                                                                                | ❌                                                                  |
+| 1046        | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight)                             | ❌                                                                                                                | ❌                                                                  |
 
 ## Intervals
 
@@ -206,3 +206,14 @@
 | 846         | [Hand of Straights](https://leetcode.com/problems/hand-of-straights)                                         | ❌                                                                        | ❌                                                                  |
 | 1899        | [Merge Triplets to Form Target Triplet](https://leetcode.com/problems/merge-triplets-to-form-target-triplet) | ❌                                                                        | ❌                                                                  |
 | 678         | [Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string)                           | ❌                                                                        | ❌                                                                  |
+
+## Math
+
+| LeetCode ID | Problem Name                                                         | Solutions | Video |
+| ----------- | -------------------------------------------------------------------- | --------- | ----- |
+| 202         | [Happy Number](https://leetcode.com/problems/happy-number)           | ❌        | ❌    |
+| 66          | [Plus One](https://leetcode.com/problems/plus-one)                   | ❌        | ❌    |
+| 50          | [Pow(x, n)](https://leetcode.com/problems/powx-n)                    | ❌        | ❌    |
+| 48          | [Rotate Image](https://leetcode.com/problems/rotate-image)           | ❌        | ❌    |
+| 54          | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)         | ❌        | ❌    |
+| 73          | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes) | ❌        | ❌    |
