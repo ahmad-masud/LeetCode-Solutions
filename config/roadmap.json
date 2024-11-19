@@ -76,16 +76,6 @@
         "ID": 217,
         "Title": "Contains Duplicate",
         "Link": "https://leetcode.com/problems/contains-duplicate"
-      },
-      {
-        "ID": 451,
-        "Title": "Sort Characters By Frequency",
-        "Link": "https://leetcode.com/problems/sort-characters-by-frequency"
-      },
-      {
-        "ID": 49,
-        "Title": "Group Anagrams",
-        "Link": "https://leetcode.com/problems/group-anagrams"
       }
     ]
   },
@@ -113,24 +103,9 @@
         "Link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock"
       },
       {
-        "ID": 345,
-        "Title": "Reverse Vowels of a String",
-        "Link": "https://leetcode.com/problems/reverse-vowels-of-a-string"
-      },
-      {
         "ID": 11,
         "Title": "Container With Most Water",
         "Link": "https://leetcode.com/problems/container-with-most-water"
-      },
-      {
-        "ID": 283,
-        "Title": "Move Zeroes",
-        "Link": "https://leetcode.com/problems/move-zeroes"
-      },
-      {
-        "ID": 27,
-        "Title": "Remove Element",
-        "Link": "https://leetcode.com/problems/remove-element"
       },
       {
         "ID": 1253,
@@ -141,6 +116,11 @@
         "ID": 88,
         "Title": "Merge Sorted Array",
         "Link": "https://leetcode.com/problems/merge-sorted-array"
+      },
+      {
+        "ID": 42,
+        "Title": "Trapping Rain Water",
+        "Link": "https://leetcode.com/problems/trapping-rain-water"
       }
     ]
   },
@@ -171,11 +151,6 @@
         "ID": 42,
         "Title": "Trapping Rain Water",
         "Link": "https://leetcode.com/problems/trapping-rain-water"
-      },
-      {
-        "ID": 84,
-        "Title": "Largest Rectangle in Histogram",
-        "Link": "https://leetcode.com/problems/largest-rectangle-in-histogram"
       }
     ]
   },
