@@ -34,7 +34,7 @@
 | 121         | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)     | [✔️](solutions/121/solution1/code.py)                                       | [✔️](https://www.youtube.com/embed/t5D4F67kmM0?si=hhnGUi3SmfaiITXZ) |
 | 11          | [Container With Most Water](https://leetcode.com/problems/container-with-most-water)                 | ❌                                                                          | ❌                                                                  |
 | 1253        | [Partition Labels](https://leetcode.com/problems/partition-labels)                                   | ❌                                                                          | ❌                                                                  |
-| 88          | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)                               | ❌                                                                          | ❌                                                                  |
+| 88          | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)                               | [✔️](solutions/88/solution1/code.py) [✔️](solutions/88/solution2/code.py)   | [✔️](https://www.youtube.com/embed/RXgUvXvLXAI?si=s7z7yajs6OfrIKV-) |
 | 42          | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)                             | ❌                                                                          | ❌                                                                  |
 
 ## Stacks
