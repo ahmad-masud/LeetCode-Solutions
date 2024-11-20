@@ -114,6 +114,24 @@
     ]
   },
   {
+    "id": 88,
+    "video": "RXgUvXvLXAI?si=s7z7yajs6OfrIKV-",
+    "solutions": [
+      {
+        "title": "Two Pointers (Start from Beginning)",
+        "pythonCode": "class Solution:\n    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:\n        \"\"\"\n        Do not return anything, modify nums1 in-place instead.\n        \"\"\"\n        res = []\n        p1 = p2 = 0\n\n        while p1 < m and p2 < n:\n            if nums1[p1] < nums2[p2]:\n                res.append(nums1[p1])\n                p1 += 1\n            else:\n                res.append(nums2[p2])\n                p2 += 1\n\n        while p1 < m:\n            res.append(nums1[p1])\n            p1 += 1\n\n        while p2 < n:\n            res.append(nums2[p2])\n            p2 += 1\n\n        nums1[:m + n] = res",
+        "timeComplexity": "O(m + n)",
+        "spaceComplexity": "O(m)"
+      },
+      {
+        "title": "Two Pointers (Start from End)",
+        "pythonCode": "class Solution:\n    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:\n        \"\"\"\n        Do not return anything, modify nums1 in-place instead.\n        \"\"\"\n        while m > 0 and n > 0:\n            if nums1[m - 1] >= nums2[n - 1]:\n                nums1[m + n - 1] = nums1[m - 1]\n                m -= 1\n            else:\n                nums1[m + n - 1] = nums2[n - 1]\n                n -= 1\n\n        if n > 0:\n            nums1[:n] = nums2[:n]",
+        "timeComplexity": "O(m + n)",
+        "spaceComplexity": "O(1)"
+      }
+    ]
+  },
+  {
     "id": 94,
     "video": "MR-F70Hawo8?si=YXJUh-30v4xd-PLh",
     "solutions": [
