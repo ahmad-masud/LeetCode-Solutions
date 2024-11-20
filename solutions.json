@@ -121,7 +121,7 @@
         "title": "Two Pointers (Start from Beginning)",
         "pythonCode": "class Solution:\n    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:\n        \"\"\"\n        Do not return anything, modify nums1 in-place instead.\n        \"\"\"\n        res = []\n        p1 = p2 = 0\n\n        while p1 < m and p2 < n:\n            if nums1[p1] < nums2[p2]:\n                res.append(nums1[p1])\n                p1 += 1\n            else:\n                res.append(nums2[p2])\n                p2 += 1\n\n        while p1 < m:\n            res.append(nums1[p1])\n            p1 += 1\n\n        while p2 < n:\n            res.append(nums2[p2])\n            p2 += 1\n\n        nums1[:m + n] = res",
         "timeComplexity": "O(m + n)",
-        "spaceComplexity": "O(m)"
+        "spaceComplexity": "O(m + n)"
       },
       {
         "title": "Two Pointers (Start from End)",
