@@ -28,7 +28,7 @@
         "spaceComplexity": "O(1)"
       },
       {
-        "title": "Brute Force",
+        "title": "Two Pointers",
         "pythonCode": "class Solution:\n    def maxArea(self, height: List[int]) -> int:\n        res = 0\n        l = 0\n        r = len(height) - 1\n\n        while l < r:\n            area = (r - l) * min(height[l], height[r])\n            res = max(res, area)\n\n            if height[l] < height[r]:\n                l += 1\n            else:\n                r -= 1\n\n        return res",
         "timeComplexity": "O(n)",
         "spaceComplexity": "O(1)"
