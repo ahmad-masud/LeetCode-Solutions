@@ -1,5 +1,5 @@
 {
-  "title": "Brute Force",
+  "title": "Two Pointers",
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)"
 }
