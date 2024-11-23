@@ -552,6 +552,18 @@
     ]
   },
   {
+    "id": 763,
+    "video": "sry1ERSzKtw?si=_-ezcqOs1CifkhAJ",
+    "solutions": [
+      {
+        "title": "Two Pointers",
+        "pythonCode": "class Solution:\n    def partitionLabels(self, s: str) -> List[int]:\n        last = {c: i for i, c in enumerate(s)}\n        res = []\n        start = end = 0\n\n        for i, c in enumerate(s):\n            end = max(end, last[c])\n\n            if i == end:\n                res.append(end - start + 1)\n                start = i + 1\n\n        return res",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)"
+      }
+    ]
+  },
+  {
     "id": 1768,
     "video": "6tqnIGynncU?si=H1Pz6ncVs3a_F5cK",
     "solutions": [
