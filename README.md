@@ -117,13 +117,13 @@
 
 ## Heaps
 
-| LeetCode ID | Problem Name                                                                                     | Solutions | Video |
-| ----------- | ------------------------------------------------------------------------------------------------ | --------- | ----- |
-| 215         | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array) | ❌        | ❌    |
-| 973         | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin)           | ❌        | ❌    |
-| 703         | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream) | ❌        | ❌    |
-| 295         | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream)       | ❌        | ❌    |
-| 1046        | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight)                             | ❌        | ❌    |
+| LeetCode ID | Problem Name                                                                                     | Solutions                                                                                                            | Video                                                               |
+| ----------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 215         | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array) | ❌                                                                                                                   | ❌                                                                  |
+| 973         | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin)           | ❌                                                                                                                   | ❌                                                                  |
+| 703         | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream) | ❌                                                                                                                   | ❌                                                                  |
+| 295         | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream)       | ❌                                                                                                                   | ❌                                                                  |
+| 1046        | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight)                             | [✔️](solutions/1046/solution1/code.py) [✔️](solutions/1046/solution2/code.py) [✔️](solutions/1046/solution3/code.py) | [✔️](https://www.youtube.com/embed/TECAKV7m2F0?si=mSh8pl_lNoRgGHxs) |
 
 ## Intervals
 
@@ -211,4 +211,3 @@
 | 48          | [Rotate Image](https://leetcode.com/problems/rotate-image)           | ❌        | ❌    |
 | 54          | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)         | ❌        | ❌    |
 | 73          | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes) | ❌        | ❌    |
-| 43          | [Multiply Strings](https://leetcode.com/problems/multiply-strings)   | ❌        | ❌    |
