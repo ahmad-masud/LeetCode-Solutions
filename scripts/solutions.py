@@ -7,26 +7,16 @@ def solutions(root_dir, source_dir):
     print(f"Root directory: {root_dir}")
     print(f"Source directory: {source_dir}")
 
-    # Load overviews from overviews.json
-    overview_file_path = os.path.join(root_dir, 'overviews.json')
-    if not os.path.isfile(overview_file_path):
-        print(f"Error: overviews.json file not found at {overview_file_path}")
-        return
-
-    with open(overview_file_path, 'r') as overview_file:
-        overviews = json.load(overview_file)
-
     # Walk through each problem directory
     for problem_dir in sorted(os.listdir(source_dir)):
         problem_path = os.path.join(source_dir, problem_dir)
         print(f"Processing problem directory: {problem_path}")
 
         if os.path.isdir(problem_path) and problem_dir.isdigit():
-            problem_id = int(problem_dir)
             problem_obj = {
-                "id": problem_id,
+                "id": int(problem_dir),
                 "video": None,
-                "overview": overviews.get(str(problem_id), ""),
+                "overview": "",
                 "solutions": []
             }
 
@@ -36,6 +26,13 @@ def solutions(root_dir, source_dir):
                 print(f"Found video file at: {video_path}")
                 with open(video_path, 'r') as video_file:
                     problem_obj["video"] = video_file.read().strip()
+
+            # Check for overview file
+            overview_path = os.path.join(problem_path, 'overview.txt')
+            if os.path.isfile(overview_path):
+                print(f"Found overview file at: {overview_path}")
+                with open(overview_path, 'r') as overview_file:
+                    problem_obj["overview"] = overview_file.read().strip()
 
             # Collect solutions
             for solution_dir in sorted(os.listdir(problem_path)):
