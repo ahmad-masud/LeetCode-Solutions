@@ -403,11 +403,6 @@
         "Link": "https://leetcode.com/problems/kth-largest-element-in-an-array"
       },
       {
-        "ID": 347,
-        "Title": "Top K Frequent Elements",
-        "Link": "https://leetcode.com/problems/top-k-frequent-elements"
-      },
-      {
         "ID": 973,
         "Title": "K Closest Points to Origin",
         "Link": "https://leetcode.com/problems/k-closest-points-to-origin"
@@ -721,6 +716,11 @@
         "ID": 73,
         "Title": "Set Matrix Zeroes",
         "Link": "https://leetcode.com/problems/set-matrix-zeroes"
+      },
+      {
+        "ID": 43,
+        "Title": "Multiply Strings",
+        "Link": "https://leetcode.com/problems/multiply-strings"
       }
     ]
   }
