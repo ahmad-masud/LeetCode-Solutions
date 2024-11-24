@@ -716,11 +716,6 @@
         "ID": 73,
         "Title": "Set Matrix Zeroes",
         "Link": "https://leetcode.com/problems/set-matrix-zeroes"
-      },
-      {
-        "ID": 43,
-        "Title": "Multiply Strings",
-        "Link": "https://leetcode.com/problems/multiply-strings"
       }
     ]
   }
