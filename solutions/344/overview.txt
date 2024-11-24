@@ -1,0 +1,1 @@
+The Reverse String problem asks you to reverse a given string in place using minimal space. By employing a two-pointer approach, the solution swaps characters at opposite ends until the pointers meet. This problem reinforces basic array manipulation and pointer techniques.

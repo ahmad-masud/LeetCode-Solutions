@@ -1,0 +1,1 @@
+The Minimum Size Subarray Sum problem requires finding the smallest contiguous subarray with a sum greater than or equal to a target value. Using the sliding window technique, the solution dynamically adjusts the window size to balance efficiency and correctness. This problem demonstrates how to optimize array traversal with minimal overhead.

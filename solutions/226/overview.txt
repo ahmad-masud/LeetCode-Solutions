@@ -1,0 +1,1 @@
+The Invert Binary Tree problem involves swapping the left and right children of every node in a binary tree. It can be solved recursively or iteratively and is a fundamental exercise in tree manipulation and recursion.

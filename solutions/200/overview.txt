@@ -1,0 +1,1 @@
+The Number of Islands problem involves finding and counting distinct islands in a 2D grid where `1` represents land and `0` represents water. Using either depth-first search (DFS) or breadth-first search (BFS), the problem explores graph traversal techniques and how to mark visited nodes. It is a classic exercise in flood-fill algorithms and spatial reasoning.

@@ -1,0 +1,1 @@
+The Valid Parentheses problem is about determining whether a string containing parentheses is balanced and valid. The solution involves using a stack to keep track of opening brackets and matching them with corresponding closing brackets. This problem emphasizes stack-based data structures and is a foundational exercise in understanding how to process nested or hierarchical data.

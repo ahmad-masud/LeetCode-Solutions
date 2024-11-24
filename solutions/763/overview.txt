@@ -1,0 +1,1 @@
+The Partition Labels problem divides a string into as many parts as possible, ensuring that each letter appears in only one part. The solution uses greedy algorithms and character frequency tracking. This problem emphasizes optimal partitioning strategies.

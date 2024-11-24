@@ -7,15 +7,26 @@ def solutions(root_dir, source_dir):
     print(f"Root directory: {root_dir}")
     print(f"Source directory: {source_dir}")
 
+    # Load overviews from overviews.json
+    overview_file_path = os.path.join(root_dir, 'overviews.json')
+    if not os.path.isfile(overview_file_path):
+        print(f"Error: overviews.json file not found at {overview_file_path}")
+        return
+
+    with open(overview_file_path, 'r') as overview_file:
+        overviews = json.load(overview_file)
+
     # Walk through each problem directory
     for problem_dir in sorted(os.listdir(source_dir)):
         problem_path = os.path.join(source_dir, problem_dir)
         print(f"Processing problem directory: {problem_path}")
 
         if os.path.isdir(problem_path) and problem_dir.isdigit():
+            problem_id = int(problem_dir)
             problem_obj = {
-                "id": int(problem_dir),
+                "id": problem_id,
                 "video": None,
+                "overview": overviews.get(str(problem_id), ""),
                 "solutions": []
             }
 
@@ -59,7 +70,7 @@ def solutions(root_dir, source_dir):
     solutions_data.sort(key=lambda x: x["id"])
 
     # Write data to solutions.json
-    output_file = os.path.join(root_dir, 'solutions.json')  # Adjusted path
+    output_file = os.path.join(root_dir, 'solutions.json')
     with open(output_file, 'w') as json_file:
         json.dump(solutions_data, json_file, indent=4)
 

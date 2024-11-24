@@ -1,0 +1,1 @@
+The Subsets problem generates all possible subsets of a given array. Using backtracking or iterative approaches, the solution explores combinations systematically. This problem introduces combinatorial generation and recursive problem solving.

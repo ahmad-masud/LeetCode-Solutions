@@ -1,0 +1,1 @@
+The Merge Sorted Array problem involves merging two sorted arrays into one sorted array in place. Using a two-pointer technique, the solution iterates from the back to minimize overwriting. This problem teaches in-place operations and efficient merging.

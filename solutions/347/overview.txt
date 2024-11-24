@@ -1,0 +1,1 @@
+The Top K Frequent Elements problem requires finding the K most frequent elements in an array. Using hash maps for frequency counting and heaps for efficient retrieval, the solution balances speed and memory usage. This problem demonstrates advanced data structure applications.

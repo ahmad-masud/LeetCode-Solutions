@@ -1,0 +1,1 @@
+The Find Closest Number to Zero problem involves finding the number closest to zero in an array. If there are ties, the positive number is preferred. The task requires careful comparisons and handling of edge cases involving negative numbers and zeros.

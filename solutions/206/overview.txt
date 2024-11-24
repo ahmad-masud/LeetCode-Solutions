@@ -1,0 +1,1 @@
+The Reverse Linked List problem involves reversing the order of nodes in a singly linked list. The iterative solution uses three pointers to traverse and reverse the list, while the recursive solution leverages the call stack. This problem is a classic exercise in linked list manipulation and pointer management.

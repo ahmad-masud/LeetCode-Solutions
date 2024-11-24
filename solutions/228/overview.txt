@@ -1,0 +1,1 @@
+The Summary Ranges problem generates concise descriptions of ranges in a sorted array of integers. It requires iterating through the array while identifying consecutive sequences. The challenge lies in efficiently managing boundaries and formatting the output.

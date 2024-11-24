@@ -1,0 +1,1 @@
+The Intersection of Two Arrays problem involves finding common elements between two arrays. By using sets for fast lookups, the solution avoids redundant comparisons and achieves optimal performance. This problem emphasizes set operations and their real-world applications.
