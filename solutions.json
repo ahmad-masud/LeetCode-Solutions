@@ -594,6 +594,31 @@
     ]
   },
   {
+    "id": 1046,
+    "video": "TECAKV7m2F0?si=mSh8pl_lNoRgGHxs",
+    "overview": "The **\"Last Stone Weight\"** problem is a simulation-based question where you repeatedly smash the two heaviest stones in a list until at most one stone remains. If the two stones have equal weight, both are destroyed. If they have different weights, the smaller one is destroyed, and the larger one is reduced by the smaller stone's weight. This process continues until no more than one stone is left, and the task is to return the weight of that stone or `0` if all stones are destroyed. The problem involves prioritizing the heaviest stones in each iteration, making it suitable for approaches like heaps, sorting, or direct simulation. Efficient solutions focus on minimizing the overhead of repeatedly finding and updating the heaviest stones.",
+    "solutions": [
+      {
+        "title": "Manual Simulation",
+        "pythonCode": "class Solution:\n    def lastStoneWeight(self, stones: List[int]) -> int:\n        while len(stones) > 1:\n            max1 = max(stones)\n            stones.remove(max1)\n\n            max2 = max(stones)\n            stones.remove(max2)\n        \n            if max1 != max2:\n                stones.append(max1 - max2)\n    \n        return stones[0] if stones else 0",
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Sorting",
+        "pythonCode": "class Solution:\n    def lastStoneWeight(self, stones: List[int]) -> int:\n        while len(stones) > 1:\n            stones.sort()\n            y = stones.pop()\n            x = stones.pop()\n            \n            if x != y:\n                stones.append(y - x)\n    \n        return stones[0] if stones else 0",
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)"
+      },
+      {
+        "title": "Max Heap - Optimal Solution",
+        "pythonCode": "class Solution:\n    def lastStoneWeight(self, stones: List[int]) -> int:\n        stones = [-s for s in stones]\n        heapq.heapify(stones)\n        \n        while len(stones) > 1:\n            y = -heapq.heappop(stones)\n            x = -heapq.heappop(stones)\n            \n            if x != y:\n                heapq.heappush(stones, -(y - x))\n        \n        return -stones[0] if stones else 0",
+        "timeComplexity": "O(nlogn)",
+        "spaceComplexity": "O(n)"
+      }
+    ]
+  },
+  {
     "id": 1768,
     "video": "6tqnIGynncU?si=H1Pz6ncVs3a_F5cK",
     "overview": "The Merge Strings Alternately problem asks you to merge two strings character by character, alternating between them. If one string is longer than the other, the remaining characters are appended to the result. The task emphasizes careful iteration over strings with different lengths and demonstrates how to combine elements from multiple sources in a structured manner.",
