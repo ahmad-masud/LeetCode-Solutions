@@ -1,5 +1,5 @@
 {
   "title": "Hash Table Tracking",
-  "time_complexity": "O(n)",
-  "space_complexity": "O(1)"
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)"
 }
