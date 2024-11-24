@@ -318,8 +318,8 @@
       {
         "title": "Hash Table Tracking",
         "pythonCode": "class Solution:\n    def isIsomorphic(self, s: str, t: str) -> bool:\n        dic1 = {}\n        dic2 = {}\n        \n        for i in range(len(s)):\n            if (s[i] in dic1 and dic1[s[i]] != t[i]):\n                return False\n            \n            if (t[i] in dic2 and dic2[t[i]] != s[i]):\n                return False\n            \n            dic1[s[i]] = t[i]\n            dic2[t[i]] = s[i]\n\n        return True",
-        "timeComplexity": "",
-        "spaceComplexity": ""
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)"
       }
     ]
   },
