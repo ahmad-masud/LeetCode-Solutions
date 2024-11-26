@@ -1,0 +1,5 @@
+{
+  "title": "Brute-Force (Backtracking)",
+  "timeComplexity": "O(2^n)",
+  "spaceComplexity": "O(n)"
+}
