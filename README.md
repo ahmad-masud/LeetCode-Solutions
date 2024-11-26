@@ -164,18 +164,18 @@
 
 ## Dynamic Programming
 
-| LeetCode ID | Problem Name                                                                                   | Solutions | Video |
-| ----------- | ---------------------------------------------------------------------------------------------- | --------- | ----- |
-| 70          | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)                               | ❌        | ❌    |
-| 746         | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs)             | ❌        | ❌    |
-| 198         | [House Robber](https://leetcode.com/problems/house-robber)                                     | ❌        | ❌    |
-| 213         | [House Robber II](https://leetcode.com/problems/house-robber-ii)                               | ❌        | ❌    |
-| 62          | [Unique Paths](https://leetcode.com/problems/unique-paths)                                     | ❌        | ❌    |
-| 63          | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii)                               | ❌        | ❌    |
-| 5           | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring)   | ❌        | ❌    |
-| 300         | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence) | ❌        | ❌    |
-| 1143        | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)         | ❌        | ❌    |
-| 152         | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray)             | ❌        | ❌    |
+| LeetCode ID | Problem Name                                                                                   | Solutions                                                                                                                                           | Video                                                               |
+| ----------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 70          | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)                               | [✔️](solutions/70/solution1/code.py) [✔️](solutions/70/solution2/code.py) [✔️](solutions/70/solution3/code.py) [✔️](solutions/70/solution4/code.py) | [✔️](https://www.youtube.com/embed/pvAzR_7mlnY?si=vKFFU1TZ0lhqXqGQ) |
+| 746         | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs)             | ❌                                                                                                                                                  | ❌                                                                  |
+| 198         | [House Robber](https://leetcode.com/problems/house-robber)                                     | ❌                                                                                                                                                  | ❌                                                                  |
+| 213         | [House Robber II](https://leetcode.com/problems/house-robber-ii)                               | ❌                                                                                                                                                  | ❌                                                                  |
+| 62          | [Unique Paths](https://leetcode.com/problems/unique-paths)                                     | ❌                                                                                                                                                  | ❌                                                                  |
+| 63          | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii)                               | ❌                                                                                                                                                  | ❌                                                                  |
+| 5           | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring)   | ❌                                                                                                                                                  | ❌                                                                  |
+| 300         | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence) | ❌                                                                                                                                                  | ❌                                                                  |
+| 1143        | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)         | ❌                                                                                                                                                  | ❌                                                                  |
+| 152         | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray)             | ❌                                                                                                                                                  | ❌                                                                  |
 
 ## Bit Manipulation
 
