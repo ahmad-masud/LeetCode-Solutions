@@ -121,6 +121,37 @@
     ]
   },
   {
+    "id": 70,
+    "video": "pvAzR_7mlnY?si=vKFFU1TZ0lhqXqGQ",
+    "overview": "The Climbing Stairs problem is a classic example of dynamic programming and recursion. It involves finding the number of distinct ways to climb a staircase with n steps, where you can take either one or two steps at a time. This problem demonstrates the properties of overlapping subproblems and optimal substructure, making it well-suited for recursive solutions with memoization or iterative dynamic programming approaches. The mathematical structure of the problem resembles the Fibonacci sequence, as the number of ways to reach step n is the sum of the ways to reach steps n minus one and n minus two. While naive recursion has exponential time complexity, optimized solutions such as memoization or iterative techniques achieve linear time complexity with constant or linear space requirements. This problem is often used to teach fundamental concepts in dynamic programming and algorithmic optimization.",
+    "solutions": [
+      {
+        "title": "Brute-Force (Backtracking)",
+        "pythonCode": "class Solution:\n    def climbStairs(self, n: int) -> int:\n        def backtrack(steps: int) -> int:\n            if steps == n:\n                return 1\n            elif steps > n:\n                return 0\n\n            return backtrack(steps + 1) + backtrack(steps + 2)\n\n        return backtrack(0)",
+        "timeComplexity": "O(2^n)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Backtracking with Memoization",
+        "pythonCode": "class Solution:\n    def climbStairs(self, n: int) -> int:\n        memo = {}\n\n        def backtrack(steps: int) -> int:\n            if steps == n:\n                return 1\n            elif steps > n:\n                return 0\n            elif steps in memo:\n                return memo[steps]\n\n            memo[steps] = backtrack(steps + 1) + backtrack(steps + 2)\n            \n            return memo[steps]\n\n        return backtrack(0)",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Dynamic Programming (Tabulation)",
+        "pythonCode": "class Solution:\n    def climbStairs(self, n: int) -> int:\n        steps = [0] * (n + 1)\n        steps[0], steps[1] = 1, 1\n\n        for i in range(2, n + 1):\n            steps[i] = steps[i - 1] + steps[i - 2]\n\n        return steps[n]",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(n)"
+      },
+      {
+        "title": "Optimized Iterative Tabulation (Fibonacci Sequence)",
+        "pythonCode": "class Solution:\n    def climbStairs(self, n: int) -> int:\n        prev, curr = 1, 1\n\n        for _ in range(2, n + 1):\n            prev, curr = curr, prev + curr\n\n        return curr",
+        "timeComplexity": "O(n)",
+        "spaceComplexity": "O(1)"
+      }
+    ]
+  },
+  {
     "id": 78,
     "video": "GHtOJN7RX-0?si=A1OHau29Wj7RQsUY",
     "overview": "The Subsets problem generates all possible subsets of a given array. Using backtracking or iterative approaches, the solution explores combinations systematically. This problem introduces combinatorial generation and recursive problem solving.",
