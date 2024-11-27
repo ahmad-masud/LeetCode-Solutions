@@ -110,10 +110,10 @@
 
 ## Tries
 
-| LeetCode ID | Problem Name                                                                                                           | Solutions | Video |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------- | --------- | ----- |
-| 208         | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree)                               | ❌        | ❌    |
-| 211         | [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure) | ❌        | ❌    |
+| LeetCode ID | Problem Name                                                                                                           | Solutions                             | Video                                                               |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------- |
+| 208         | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree)                               | [✔️](solutions/208/solution1/code.py) | [✔️](https://www.youtube.com/embed/5o_nS5WKaZY?si=4Pz4lB9ojbjiz4SQ) |
+| 211         | [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure) | ❌                                    | ❌                                                                  |
 
 ## Heaps
 
