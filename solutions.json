@@ -102,6 +102,19 @@
     ]
   },
   {
+    "id": 48,
+    "video": "Sj8UpBuqnbA?si=unPfe17rDED4V2Em",
+    "overview": "Rotate Image, involves rotating a given n x n 2D matrix by 90 degrees clockwise. The task requires transforming the matrix in place, meaning no additional matrix should be used for storage. The solution generally involves two main steps. First, the matrix is transposed by swapping matrix elements along its diagonal, effectively converting rows into columns. Second, each row of the transposed matrix is reversed to achieve the 90-degree rotation. This problem is a great exercise in matrix manipulation and emphasizes the importance of in-place operations for optimal space efficiency.",
+    "solutions": [
+      {
+        "title": "Transpose Matrix and reverse rows",
+        "pythonCode": "class Solution:\n    def rotate(self, matrix: List[List[int]]) -> None:\n        \"\"\"\n        Do not return anything, modify matrix in-place instead.\n        \"\"\"\n        N = len(matrix)\n\n        for r in range(N):\n            for c in range(r, N):\n                matrix[r][c], matrix[c][r] = matrix[c][r], matrix[r][c]\n\n        for r in matrix:\n            r.reverse()",
+        "timeComplexity": "O(n^2)",
+        "spaceComplexity": "O(1)"
+      }
+    ]
+  },
+  {
     "id": 53,
     "video": "zfBUOrv1u4k?si=P3USqAXRpTLHMnbf",
     "overview": "The Maximum Subarray problem seeks the largest sum of any contiguous subarray within an array. Kadane's Algorithm provides an elegant O(n) solution by maintaining a running sum and dynamically updating the maximum sum. This problem highlights dynamic programming concepts.",
