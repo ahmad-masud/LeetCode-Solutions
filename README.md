@@ -203,11 +203,11 @@
 
 ## Math
 
-| LeetCode ID | Problem Name                                                         | Solutions | Video |
-| ----------- | -------------------------------------------------------------------- | --------- | ----- |
-| 202         | [Happy Number](https://leetcode.com/problems/happy-number)           | ❌        | ❌    |
-| 66          | [Plus One](https://leetcode.com/problems/plus-one)                   | ❌        | ❌    |
-| 50          | [Pow(x, n)](https://leetcode.com/problems/powx-n)                    | ❌        | ❌    |
-| 48          | [Rotate Image](https://leetcode.com/problems/rotate-image)           | ❌        | ❌    |
-| 54          | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)         | ❌        | ❌    |
-| 73          | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes) | ❌        | ❌    |
+| LeetCode ID | Problem Name                                                         | Solutions                            | Video                                                               |
+| ----------- | -------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------- |
+| 202         | [Happy Number](https://leetcode.com/problems/happy-number)           | ❌                                   | ❌                                                                  |
+| 66          | [Plus One](https://leetcode.com/problems/plus-one)                   | ❌                                   | ❌                                                                  |
+| 50          | [Pow(x, n)](https://leetcode.com/problems/powx-n)                    | ❌                                   | ❌                                                                  |
+| 48          | [Rotate Image](https://leetcode.com/problems/rotate-image)           | [✔️](solutions/48/solution1/code.py) | [✔️](https://www.youtube.com/embed/Sj8UpBuqnbA?si=unPfe17rDED4V2Em) |
+| 54          | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)         | ❌                                   | ❌                                                                  |
+| 73          | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes) | ❌                                   | ❌                                                                  |
