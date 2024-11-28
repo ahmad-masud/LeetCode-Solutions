@@ -1,0 +1,5 @@
+{
+  "title": "Transpose Matrix and reverse rows",
+  "timeComplexity": "O(n^2)",
+  "spaceComplexity": "O(1)"
+}
