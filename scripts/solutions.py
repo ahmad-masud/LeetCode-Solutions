@@ -16,7 +16,7 @@ def solutions(root_dir, source_dir):
             problem_obj = {
                 "id": int(problem_dir),
                 "video": None,
-                "overview": "",
+                "solutions": []
             }
 
             # Check for video file
