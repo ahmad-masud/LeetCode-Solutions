@@ -1,1 +1,0 @@
-The Number of 1 Bits problem involves counting the number of `1` bits in the binary representation of an integer. The challenge focuses on bit manipulation techniques, such as repeatedly shifting the bits and using bitwise AND operations to isolate individual bits. This problem serves as a gateway to understanding low-level binary operations and their applications in programming.

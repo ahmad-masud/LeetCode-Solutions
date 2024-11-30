@@ -1,1 +1,0 @@
-The Valid Sudoku problem checks whether a given Sudoku board is valid according to the game's rules. The solution requires validating rows, columns, and subgrids independently. This problem emphasizes grid-based reasoning and systematic validation.

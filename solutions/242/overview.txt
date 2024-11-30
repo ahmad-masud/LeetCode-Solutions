@@ -1,1 +1,0 @@
-The Valid Anagram problem checks if two strings are anagrams by comparing character frequencies. Sorting the strings is a simple solution, but using hash maps for frequency counting is more efficient. This problem highlights string manipulation and frequency analysis.

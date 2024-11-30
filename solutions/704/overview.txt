@@ -1,1 +1,0 @@
-The Binary Search problem involves searching for a target element in a sorted array using the divide-and-conquer principle. The solution achieves O(log n) time complexity and is a foundational algorithm in computer science.

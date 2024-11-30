@@ -1,1 +1,0 @@
-The Contains Duplicate problem asks if an array contains any duplicate elements. While the brute force approach involves nested loops, an optimal solution uses hash sets to track seen elements in linear time. This problem is a straightforward yet critical exercise in leveraging efficient data structures.

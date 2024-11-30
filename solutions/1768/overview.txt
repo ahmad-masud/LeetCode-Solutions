@@ -1,1 +1,0 @@
-The Merge Strings Alternately problem asks you to merge two strings character by character, alternating between them. If one string is longer than the other, the remaining characters are appended to the result. The task emphasizes careful iteration over strings with different lengths and demonstrates how to combine elements from multiple sources in a structured manner.

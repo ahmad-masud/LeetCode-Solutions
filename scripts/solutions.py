@@ -17,7 +17,6 @@ def solutions(root_dir, source_dir):
                 "id": int(problem_dir),
                 "video": None,
                 "overview": "",
-                "solutions": []
             }
 
             # Check for video file
@@ -26,13 +25,6 @@ def solutions(root_dir, source_dir):
                 print(f"Found video file at: {video_path}")
                 with open(video_path, 'r') as video_file:
                     problem_obj["video"] = video_file.read().strip()
-
-            # Check for overview file
-            overview_path = os.path.join(problem_path, 'overview.txt')
-            if os.path.isfile(overview_path):
-                print(f"Found overview file at: {overview_path}")
-                with open(overview_path, 'r') as overview_file:
-                    problem_obj["overview"] = overview_file.read().strip()
 
             # Collect solutions
             for solution_dir in sorted(os.listdir(problem_path)):

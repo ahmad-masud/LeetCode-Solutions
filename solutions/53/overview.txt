@@ -1,1 +1,0 @@
-The Maximum Subarray problem seeks the largest sum of any contiguous subarray within an array. Kadane's Algorithm provides an elegant O(n) solution by maintaining a running sum and dynamically updating the maximum sum. This problem highlights dynamic programming concepts.

@@ -1,1 +1,0 @@
-The Binary Tree Inorder Traversal problem performs an inorder traversal of a binary tree, visiting nodes in the left-root-right order. Both recursive and iterative solutions highlight the importance of stack-based tree traversal.
