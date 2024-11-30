@@ -2,7 +2,6 @@
   {
     "id": 1,
     "video": "oetyCTdewlU?si=YVht9LVdy8bIOfaa",
-    "overview": "The Two Sum problem is a classic challenge where you need to identify two numbers in an array that add up to a specific target value. The problem requires an efficient approach to traverse the array, keeping track of indices and previously seen numbers to reduce redundant computations. A naive solution involves nested loops, but an optimal solution leverages hash tables to achieve constant-time lookups, making the process much faster and suitable for larger arrays. This problem is a foundational exercise in array traversal and efficient data structure usage.",
     "solutions": [
       {
         "title": "Brute Force Solution",
@@ -21,7 +20,6 @@
   {
     "id": 11,
     "video": "SxaQPGj5PLg?si=8N_m2Tk7nHCF1dlB",
-    "overview": "The Container With Most Water problem involves determining the maximum amount of water that can be contained between two vertical lines, represented as heights in an array. This problem explores two-pointer techniques, where one pointer starts at the beginning and the other at the end of the array, gradually narrowing down to maximize the area. The key insight is to move the pointer associated with the smaller height, as this could lead to a larger container. The problem teaches optimization strategies while maintaining linear time complexity.",
     "solutions": [
       {
         "title": "Brute Force",
@@ -40,7 +38,6 @@
   {
     "id": 13,
     "video": "iK0CCGldvw4?si=iogrXudOQp946u2P",
-    "overview": "The Roman to Integer problem involves converting a Roman numeral string into its equivalent integer value. The challenge lies in understanding the rules for Roman numerals, particularly when smaller numerals precede larger ones to indicate subtraction. A mapping of Roman characters to their integer values is essential, along with careful handling of cases where subtraction rules apply. This problem reinforces the use of hash maps and iterative traversal for string-based computations.",
     "solutions": [
       {
         "title": "Subtractive Notation Handling for Roman to Integer",
@@ -53,7 +50,6 @@
   {
     "id": 14,
     "video": "ALgs0EH1jTo?si=Ei5TxWCCkwmfXhCm",
-    "overview": "The Longest Common Prefix problem requires finding the longest prefix shared among an array of strings. A naive approach involves comparing characters of all strings one by one, but a more efficient method involves vertical or horizontal scanning. This problem highlights the importance of string traversal techniques and demonstrates how to optimize performance for repetitive tasks.",
     "solutions": [
       {
         "title": "Vertical Scanning",
@@ -66,7 +62,6 @@
   {
     "id": 20,
     "video": "tTIKa0xXYmk?si=vOAx0G9yA9pV4i7l",
-    "overview": "The Valid Parentheses problem is about determining whether a string containing parentheses is balanced and valid. The solution involves using a stack to keep track of opening brackets and matching them with corresponding closing brackets. This problem emphasizes stack-based data structures and is a foundational exercise in understanding how to process nested or hierarchical data.",
     "solutions": [
       {
         "title": "Stack Solution",
@@ -79,7 +74,6 @@
   {
     "id": 36,
     "video": "IL2tJYA38-s?si=dX4d76oTK3w8V-Gs",
-    "overview": "The Valid Sudoku problem checks whether a given Sudoku board is valid according to the game's rules. The solution requires validating rows, columns, and subgrids independently. This problem emphasizes grid-based reasoning and systematic validation.",
     "solutions": [
       {
         "title": "Brute Force",
@@ -104,7 +98,6 @@
   {
     "id": 48,
     "video": "Sj8UpBuqnbA?si=unPfe17rDED4V2Em",
-    "overview": "Rotate Image, involves rotating a given n x n 2D matrix by 90 degrees clockwise. The task requires transforming the matrix in place, meaning no additional matrix should be used for storage. The solution generally involves two main steps. First, the matrix is transposed by swapping matrix elements along its diagonal, effectively converting rows into columns. Second, each row of the transposed matrix is reversed to achieve the 90-degree rotation. This problem is a great exercise in matrix manipulation and emphasizes the importance of in-place operations for optimal space efficiency.",
     "solutions": [
       {
         "title": "Transpose Matrix and reverse rows",
@@ -117,7 +110,6 @@
   {
     "id": 53,
     "video": "zfBUOrv1u4k?si=P3USqAXRpTLHMnbf",
-    "overview": "The Maximum Subarray problem seeks the largest sum of any contiguous subarray within an array. Kadane's Algorithm provides an elegant O(n) solution by maintaining a running sum and dynamically updating the maximum sum. This problem highlights dynamic programming concepts.",
     "solutions": [
       {
         "title": "Brute Force Solution",
@@ -136,7 +128,6 @@
   {
     "id": 70,
     "video": "pvAzR_7mlnY?si=vKFFU1TZ0lhqXqGQ",
-    "overview": "The Climbing Stairs problem is a classic example of dynamic programming and recursion. It involves finding the number of distinct ways to climb a staircase with n steps, where you can take either one or two steps at a time. This problem demonstrates the properties of overlapping subproblems and optimal substructure, making it well-suited for recursive solutions with memoization or iterative dynamic programming approaches. The mathematical structure of the problem resembles the Fibonacci sequence, as the number of ways to reach step n is the sum of the ways to reach steps n minus one and n minus two. While naive recursion has exponential time complexity, optimized solutions such as memoization or iterative techniques achieve linear time complexity with constant or linear space requirements. This problem is often used to teach fundamental concepts in dynamic programming and algorithmic optimization.",
     "solutions": [
       {
         "title": "Brute-Force (Backtracking)",
@@ -167,7 +158,6 @@
   {
     "id": 78,
     "video": "GHtOJN7RX-0?si=A1OHau29Wj7RQsUY",
-    "overview": "The Subsets problem generates all possible subsets of a given array. Using backtracking or iterative approaches, the solution explores combinations systematically. This problem introduces combinatorial generation and recursive problem solving.",
     "solutions": [
       {
         "title": "Backtracking Solution",
@@ -186,7 +176,6 @@
   {
     "id": 88,
     "video": "RXgUvXvLXAI?si=s7z7yajs6OfrIKV-",
-    "overview": "The Merge Sorted Array problem involves merging two sorted arrays into one sorted array in place. Using a two-pointer technique, the solution iterates from the back to minimize overwriting. This problem teaches in-place operations and efficient merging.",
     "solutions": [
       {
         "title": "Two Pointers (Start from Beginning)",
@@ -205,7 +194,6 @@
   {
     "id": 94,
     "video": "MR-F70Hawo8?si=YXJUh-30v4xd-PLh",
-    "overview": "The Binary Tree Inorder Traversal problem performs an inorder traversal of a binary tree, visiting nodes in the left-root-right order. Both recursive and iterative solutions highlight the importance of stack-based tree traversal.",
     "solutions": [
       {
         "title": "Recursive Solution",
@@ -224,7 +212,6 @@
   {
     "id": 104,
     "video": "mypx8ttap7s?si=lSIz4UgxC5vOhQDQ",
-    "overview": "The Maximum Depth of Binary Tree problem measures the depth of a binary tree, which is the number of nodes along the longest path from the root to a leaf. This problem highlights the importance of recursion in tree traversal, as both the left and right subtrees need to be explored to determine the overall depth. The problem can also be solved iteratively using a queue, but the recursive approach is more intuitive. This challenge emphasizes understanding how recursive calls stack and how base cases define the termination of the recursion.",
     "solutions": [
       {
         "title": "Recursive DFS",
@@ -249,7 +236,6 @@
   {
     "id": 121,
     "video": "t5D4F67kmM0?si=hhnGUi3SmfaiITXZ",
-    "overview": "The Best Time to Buy and Sell Stock problem is about maximizing profit from a given array of stock prices, where each element represents the stock price on a specific day. The task is to identify the best day to buy and the best day to sell to achieve maximum profit. The solution involves tracking the minimum price encountered so far and calculating potential profits at each step. This problem emphasizes single-pass solutions and demonstrates the importance of efficient updates in dynamic variables.",
     "solutions": [
       {
         "title": "Two Pointers for Maximum Profit",
@@ -262,7 +248,6 @@
   {
     "id": 125,
     "video": "npBCIvCTMBs?si=MK7kvBBrJ3lYWDJp",
-    "overview": "The Valid Palindrome problem requires determining whether a given string can be considered a palindrome after removing all non-alphanumeric characters and ignoring letter case. The challenge lies in efficiently processing the string while handling edge cases like empty strings and mixed character types. A two-pointer approach is commonly used, where pointers move inward from both ends of the string to check for equality. This problem is an excellent exercise in string manipulation and input validation.",
     "solutions": [
       {
         "title": "Two Pointers with Character Filtering",
@@ -275,7 +260,6 @@
   {
     "id": 136,
     "video": "YcusSSCLmKQ?si=HaWWVb-YQGNyZv7z",
-    "overview": "The Single Number problem requires finding the unique element in an array where every other element appears twice. The problem can be solved using a hash map to count occurrences or by leveraging the XOR operation, which efficiently cancels out pairs of identical numbers, leaving the unique number. The XOR approach is optimal in terms of both time and space complexity, making it a favorite for algorithm enthusiasts.",
     "solutions": [
       {
         "title": "Brute Force Solution - Using Count",
@@ -306,7 +290,6 @@
   {
     "id": 167,
     "video": "-gPXrCoJgHE?si=rmf_JEzpk7aqUHIk",
-    "overview": "The Two Sum II problem builds on the classic Two Sum but leverages the fact that the input array is sorted. By using a two-pointer technique, the solution avoids the need for a hash table and achieves optimal performance. The pointers start at opposite ends of the array, and their positions are adjusted based on the sum of their values relative to the target. This problem showcases the efficiency gained from sorted data.",
     "solutions": [
       {
         "title": "Two-Pointer Technique",
@@ -319,7 +302,6 @@
   {
     "id": 191,
     "video": null,
-    "overview": "The Number of 1 Bits problem involves counting the number of `1` bits in the binary representation of an integer. The challenge focuses on bit manipulation techniques, such as repeatedly shifting the bits and using bitwise AND operations to isolate individual bits. This problem serves as a gateway to understanding low-level binary operations and their applications in programming.",
     "solutions": [
       {
         "title": "Count Bits with Bitwise AND",
@@ -338,7 +320,6 @@
   {
     "id": 200,
     "video": "ScvAGc6yBs4?si=qRcnTKoBhYhbcKZT",
-    "overview": "The Number of Islands problem involves finding and counting distinct islands in a 2D grid where `1` represents land and `0` represents water. Using either depth-first search (DFS) or breadth-first search (BFS), the problem explores graph traversal techniques and how to mark visited nodes. It is a classic exercise in flood-fill algorithms and spatial reasoning.",
     "solutions": [
       {
         "title": "Depth-First Search (DFS) Solution",
@@ -357,7 +338,6 @@
   {
     "id": 205,
     "video": "vlyFirJRYjE?si=e1eUJe_B6afb8yNT",
-    "overview": "The Isomorphic Strings problem checks if two strings can be transformed into each other by creating a one-to-one mapping between characters. The challenge is to ensure the mapping is consistent and bidirectional, often requiring two hash maps to track forward and reverse mappings. This problem emphasizes bijective transformations and edge-case handling.",
     "solutions": [
       {
         "title": "Hash Table Tracking",
@@ -370,7 +350,6 @@
   {
     "id": 206,
     "video": "skePaM3nA2w?si=dG_NH3eyfnq5FMyE",
-    "overview": "The Reverse Linked List problem involves reversing the order of nodes in a singly linked list. The iterative solution uses three pointers to traverse and reverse the list, while the recursive solution leverages the call stack. This problem is a classic exercise in linked list manipulation and pointer management.",
     "solutions": [
       {
         "title": "Iterative Solution",
@@ -389,7 +368,6 @@
   {
     "id": 208,
     "video": "5o_nS5WKaZY?si=4Pz4lB9ojbjiz4SQ",
-    "overview": "The Trie, also known as a prefix tree, is a specialized tree data structure that is particularly useful for managing and querying strings. It organizes strings in a hierarchical manner where each node represents a character and paths form words. This problem requires implementing a Trie with three main operations: inserting a word, searching for a word, and checking if any word starts with a given prefix. The insert operation adds a word to the Trie, search checks if a word exists in the Trie, and startsWith verifies if any word in the Trie begins with a specific prefix. Each of these operations has a time complexity of O(n), where n is the length of the word or prefix being processed. Tries are widely used in applications such as autocomplete systems, dictionary lookups, and prefix-based searches, making this implementation an essential building block for efficient string handling.",
     "solutions": [
       {
         "title": "Trie Implementation",
@@ -402,7 +380,6 @@
   {
     "id": 209,
     "video": "qgsXwaG2nvs?si=wpkI_l6-E8zZjpzM",
-    "overview": "The Minimum Size Subarray Sum problem requires finding the smallest contiguous subarray with a sum greater than or equal to a target value. Using the sliding window technique, the solution dynamically adjusts the window size to balance efficiency and correctness. This problem demonstrates how to optimize array traversal with minimal overhead.",
     "solutions": [
       {
         "title": "Brute Force Solution",
@@ -421,7 +398,6 @@
   {
     "id": 217,
     "video": "HXqyNLDyqp0?si=EFcH5z_209mPw-YR",
-    "overview": "The Contains Duplicate problem asks if an array contains any duplicate elements. While the brute force approach involves nested loops, an optimal solution uses hash sets to track seen elements in linear time. This problem is a straightforward yet critical exercise in leveraging efficient data structures.",
     "solutions": [
       {
         "title": "Brute-Force Approach",
@@ -464,7 +440,6 @@
   {
     "id": 226,
     "video": "njhJLhgM8jw?si=CA70QIT6L4PotYB5",
-    "overview": "The Invert Binary Tree problem involves swapping the left and right children of every node in a binary tree. It can be solved recursively or iteratively and is a fundamental exercise in tree manipulation and recursion.",
     "solutions": [
       {
         "title": "Recursive DFS",
@@ -495,7 +470,6 @@
   {
     "id": 228,
     "video": "9TzRVIW3Gpk?si=iZYrbL40MzcJuWcM",
-    "overview": "The Summary Ranges problem generates concise descriptions of ranges in a sorted array of integers. It requires iterating through the array while identifying consecutive sequences. The challenge lies in efficiently managing boundaries and formatting the output.",
     "solutions": [
       {
         "title": "Range Grouping with Two Pointers",
@@ -508,7 +482,6 @@
   {
     "id": 238,
     "video": "htvDp0R3C6s?si=shx2n-PoKUjbDumX",
-    "overview": "The Product of Array Except Self problem involves calculating the product of all elements in an array except the current one. The solution avoids division and achieves O(n) time complexity using prefix and suffix products. This problem is a classic demonstration of space-time trade-offs.",
     "solutions": [
       {
         "title": "Prefix and Suffix Product",
@@ -521,7 +494,6 @@
   {
     "id": 242,
     "video": "KG9GTX9oqss?si=IIPKz_m82uKnPfSe",
-    "overview": "The Valid Anagram problem checks if two strings are anagrams by comparing character frequencies. Sorting the strings is a simple solution, but using hash maps for frequency counting is more efficient. This problem highlights string manipulation and frequency analysis.",
     "solutions": [
       {
         "title": "Sorting and Comparison",
@@ -552,7 +524,6 @@
   {
     "id": 344,
     "video": "QmvMuRcnIZ8?si=yll0E7OyDREY5ogu",
-    "overview": "The Reverse String problem asks you to reverse a given string in place using minimal space. By employing a two-pointer approach, the solution swaps characters at opposite ends until the pointers meet. This problem reinforces basic array manipulation and pointer techniques.",
     "solutions": [
       {
         "title": "Two Pointer Solution",
@@ -571,7 +542,6 @@
   {
     "id": 347,
     "video": "-kBTgY7E0EU?si=w2wfHWgAdTk1zDKd",
-    "overview": "The Top K Frequent Elements problem requires finding the K most frequent elements in an array. Using hash maps for frequency counting and heaps for efficient retrieval, the solution balances speed and memory usage. This problem demonstrates advanced data structure applications.",
     "solutions": [
       {
         "title": "Sorting Approach",
@@ -596,7 +566,6 @@
   {
     "id": 349,
     "video": "Lcj_cuZUy68?si=3Gqo9JgWimF9MuRB",
-    "overview": "The Intersection of Two Arrays problem involves finding common elements between two arrays. By using sets for fast lookups, the solution avoids redundant comparisons and achieves optimal performance. This problem emphasizes set operations and their real-world applications.",
     "solutions": [
       {
         "title": "Brute Force Solution",
@@ -621,7 +590,6 @@
   {
     "id": 704,
     "video": "PBnAF8zxBVw?si=w7JuvitYAtMSDsSI",
-    "overview": "The Binary Search problem involves searching for a target element in a sorted array using the divide-and-conquer principle. The solution achieves O(log n) time complexity and is a foundational algorithm in computer science.",
     "solutions": [
       {
         "title": "Iterative Binary Search",
@@ -640,7 +608,6 @@
   {
     "id": 763,
     "video": "sry1ERSzKtw?si=_-ezcqOs1CifkhAJ",
-    "overview": "The Partition Labels problem divides a string into as many parts as possible, ensuring that each letter appears in only one part. The solution uses greedy algorithms and character frequency tracking. This problem emphasizes optimal partitioning strategies.",
     "solutions": [
       {
         "title": "Two Pointers",
@@ -653,7 +620,6 @@
   {
     "id": 1046,
     "video": "TECAKV7m2F0?si=mSh8pl_lNoRgGHxs",
-    "overview": "The \"Last Stone Weight\" problem is a simulation-based question where you repeatedly smash the two heaviest stones in a list until at most one stone remains. If the two stones have equal weight, both are destroyed. If they have different weights, the smaller one is destroyed, and the larger one is reduced by the smaller stone's weight. This process continues until no more than one stone is left, and the task is to return the weight of that stone or `0` if all stones are destroyed. The problem involves prioritizing the heaviest stones in each iteration, making it suitable for approaches like heaps, sorting, or direct simulation. Efficient solutions focus on minimizing the overhead of repeatedly finding and updating the heaviest stones.",
     "solutions": [
       {
         "title": "Manual Simulation",
@@ -678,7 +644,6 @@
   {
     "id": 1768,
     "video": "6tqnIGynncU?si=H1Pz6ncVs3a_F5cK",
-    "overview": "The Merge Strings Alternately problem asks you to merge two strings character by character, alternating between them. If one string is longer than the other, the remaining characters are appended to the result. The task emphasizes careful iteration over strings with different lengths and demonstrates how to combine elements from multiple sources in a structured manner.",
     "solutions": [
       {
         "title": "Alternating Merge",
@@ -691,7 +656,6 @@
   {
     "id": 2239,
     "video": "8VOP4Mm4nFs?si=GMR-G8DNP7sHt-s8",
-    "overview": "The Find Closest Number to Zero problem involves finding the number closest to zero in an array. If there are ties, the positive number is preferred. The task requires careful comparisons and handling of edge cases involving negative numbers and zeros.",
     "solutions": [
       {
         "title": "Alternative Approach - Sorting",
