@@ -126,6 +126,18 @@
     ]
   },
   {
+    "id": 56,
+    "video": "E57bGEyDW_A?si=prTr4CpD9VHoyz_Q",
+    "solutions": [
+      {
+        "title": "Sort and Merge",
+        "pythonCode": "class Solution:\n    def merge(self, intervals: List[List[int]]) -> List[List[int]]:\n        intervals.sort()\n        res = [intervals[0]]\n\n        for l, r in intervals[1:]:\n            if l <= res[-1][1]:\n                res[-1][1] = max(r, res[-1][1])\n            else:\n                res.append([l, r])\n\n        return res",
+        "timeComplexity": "O(nlogn)",
+        "spaceComplexity": "O(1)"
+      }
+    ]
+  },
+  {
     "id": 70,
     "video": "pvAzR_7mlnY?si=vKFFU1TZ0lhqXqGQ",
     "solutions": [
