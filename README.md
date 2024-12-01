@@ -127,13 +127,13 @@
 
 ## Intervals
 
-| LeetCode ID | Problem Name                                                                         | Solutions | Video |
-| ----------- | ------------------------------------------------------------------------------------ | --------- | ----- |
-| 56          | [Merge Intervals](https://leetcode.com/problems/merge-intervals)                     | ❌        | ❌    |
-| 57          | [Insert Interval](https://leetcode.com/problems/insert-interval)                     | ❌        | ❌    |
-| 435         | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals) | ❌        | ❌    |
-| 252         | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms)                         | ❌        | ❌    |
-| 253         | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii)                   | ❌        | ❌    |
+| LeetCode ID | Problem Name                                                                         | Solutions                            | Video                                                               |
+| ----------- | ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------- |
+| 56          | [Merge Intervals](https://leetcode.com/problems/merge-intervals)                     | [✔️](solutions/56/solution1/code.py) | [✔️](https://www.youtube.com/embed/E57bGEyDW_A?si=prTr4CpD9VHoyz_Q) |
+| 57          | [Insert Interval](https://leetcode.com/problems/insert-interval)                     | ❌                                   | ❌                                                                  |
+| 435         | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals) | ❌                                   | ❌                                                                  |
+| 252         | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms)                         | ❌                                   | ❌                                                                  |
+| 253         | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii)                   | ❌                                   | ❌                                                                  |
 
 ## Backtracking
 
